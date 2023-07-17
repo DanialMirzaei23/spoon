@@ -1,9 +1,9 @@
 // todo => export main file router LOGIC
 
 
-//Bloc-login
+//Bloc-onboarding
 export '../logic/bloc/bloc.dart';
-//Event-login
+//Event-onboarding
 export '../logic/event/eve_value.dart';
-//State-login
+//State-onboarding
 export '../logic/state/ste_value.dart';
