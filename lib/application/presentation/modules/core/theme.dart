@@ -1,14 +1,6 @@
+import 'package:spoon/application/packages/package.dart';
+import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
 
-
-import 'package:spoon/application/presentation/modules/widget/exp_main_router.dart';
-
-import '../../../packages/package.dart';
-
-///
-/// Light theme of the app is here
-///
-
-/// All colors from figma is here in HEX
 List<Color> allColors = const [
   Color(0xFFFE7825),
   Color(0xFFFFCD90),
@@ -21,22 +13,45 @@ List<Color> allColors = const [
   Color(0xFFF13232),
   Color(0xFFFFb21C),
 ];
+///just leave it for now
+Color AllTextColor = Color(0xFF313131);
+
 ThemeData lightTheme = ThemeData(
+  fontFamily: 'Poppins',
   brightness: Brightness.light,
-  /// Text Theme to Implement typography in whole app
-  textTheme: const TextTheme(
-    /// these are the only supported ones other properties are outdated
-    titleLarge: null,
-    titleMedium: null,
-    titleSmall: null,
-
+  textTheme: TextTheme(
+    titleLarge: TextStyle(
+      color: AllTextColor,
+      fontSize: 40.0,
+    ),
+    titleMedium: TextStyle(
+      color: AllTextColor,
+      fontSize: 32.0,
+    ),
+    titleSmall: TextStyle(
+      color: AllTextColor,
+      fontSize: 24.0,
+    ),
     headlineLarge: null,
-    headlineMedium: null,
-    headlineSmall: null,
+    headlineMedium: TextStyle(
+      color: AllTextColor,
+      fontSize: 20.0,
+    ),
+    headlineSmall: TextStyle(
+      color: AllTextColor,
+      fontSize: 18.0,
+    ),
 
-    bodyLarge: null,
-    bodyMedium: null,
-    bodySmall: null,
+    bodyLarge: TextStyle(
+      fontSize: 16.0,
+    ),
+    bodyMedium: TextStyle(
+      fontSize: 14.0,
+    ),
+    ///Use this for Caption
+    bodySmall: TextStyle(
+      fontSize: 12.0,
+    ),
 
     displayLarge: null,
     displayMedium: null,
@@ -46,16 +61,12 @@ ThemeData lightTheme = ThemeData(
     labelMedium: null,
     labelSmall: null,
   ),
-
-  /// Button Themes
   buttonTheme: null,
   radioTheme: null,
   elevatedButtonTheme: null,
 
-  /// Color of DisabledWidgets like button
-  disabledColor: null,
+  disabledColor: Color(0xFF979797),
 
-  /// Other Themes
   iconTheme: null,
   cardTheme: null,
   primarySwatch: null,
@@ -63,60 +74,54 @@ ThemeData lightTheme = ThemeData(
 
   colorScheme: const ColorScheme(
       brightness: Brightness.light,
-      /// Primary Button
+
       primary: Color(0xFFFE7825),
       onPrimary: Color(0xFFFFFFFF),
 
-      /// For Secondary Button
-      primaryContainer: Color(0xFFFFE1BC),
-      onPrimaryContainer: Color(0xFFFE7825),
+      primaryContainer: Color(0xFFFFFFFF),
+      onPrimaryContainer: Color(0xFF313131),
 
-      /// For BackButton Setting Button etc
-      secondary: Color(0xFFFFFFFF),
-      onSecondary: Color(0xFF313131),
+      secondary: Color(0xFFFFE1BC),
+      onSecondary: Color(0xFFFE7825),
 
-      /// Later use
       secondaryContainer: Color(0xFFFFE1BC),
-      onSecondaryContainer: Color(0xFFFFE1BC),
+      onSecondaryContainer: Color(0xFFFE7825),
 
-      /// Later use
-      tertiary: null,
-      onTertiary: null,
-      tertiaryContainer: null,
-      onTertiaryContainer: null,
+      tertiary: Color(0xFFFFFFFF),
+      onTertiary: Color(0xFF313131),
 
-      /// Card Widget background and foreground
+      tertiaryContainer: Color(0xFFFFFFFF),
+      onTertiaryContainer: Color(0xFF313131),
+
       surface: Color(0xFFFFFFFF),
       onSurface: Color(0xFF313131),
-
-      /// Later use
-      inverseSurface: null,
-      inversePrimary: null,
-      onInverseSurface: null,
-      surfaceVariant: null,
+      surfaceVariant: Color(0xFF979797),
       onSurfaceVariant: null,
-      surfaceTint: null,
 
-      /// Background color and color of the texts on background
+      inverseSurface: null,
+      onInverseSurface: null,
+      inversePrimary: null,
+
       background: Color(0xFFF7F7F3),
-      onBackground: Color(0xFFF7F7F3),///null
+      onBackground: Color(0xFF979797),
 
-      /// TextField invalid color and other error related stuff
+      ///Error like TextField Invalid
       error: Color(0xFFF13232),
       onError: Color(0xFFFFFFFF),
-      errorContainer: null,
-      onErrorContainer: null,
 
-      /// etc, Later use
-      outline: null,
-      outlineVariant: null,
+      errorContainer: Color(0xFFF13232),
+      onErrorContainer: Color(0xFFFFFFFF),
+
+      outline: Color(0xFF979797),
+      outlineVariant: Color(0xFFDADADA),
+
+      surfaceTint: null,
       scrim: null,
       shadow: null
   ),
-  /// You can add anything as extension here to increase themeData functionality
   extensions: const <ThemeExtension<dynamic>>{
     GradientExtension(
-      button_gradient: LinearGradient(
+      primaryGradient: LinearGradient(
         begin: Alignment(-1.1, -0.5),
         end: Alignment(0.5, 0.2),
         colors: [

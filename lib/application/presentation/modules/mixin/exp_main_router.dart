@@ -2,5 +2,4 @@
 
 
 export 'onGenerateRouter.dart';
-export 'generateStyleFont.dart';
 export 'generateCountry.dart';

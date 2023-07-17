@@ -1,4 +1,3 @@
-import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
 import '../../../packages/package.dart';
 
 extension ConvertTextData on String {
@@ -9,18 +8,18 @@ extension ConvertTextData on String {
     final double fontSize = 14.0,
     final FontWeight fontWeight = FontWeight.normal,
     final FontStyle fontStyle = FontStyle.normal,
-    final String fontFamily = 'poppins',
+    final String fontFamily = 'Poppins',
   }) =>
       Text(
         this,
         textDirection: textDirection,
         textAlign: textAlign,
         style: TextStyle(
-            color: color,
-            fontSize: fontSize,
-            fontWeight: fontWeight,
-            fontStyle: fontStyle,
-            fontFamily: fontFamily,
+          color: color,
+          fontSize: fontSize,
+          fontWeight: fontWeight,
+          fontStyle: fontStyle,
+          fontFamily: fontFamily,
         ),
       );
 }

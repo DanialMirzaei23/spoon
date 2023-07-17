@@ -1,53 +1,40 @@
-// todo => button Gradient
-
-
-// ignore_for_file: non_constant_identifier_names
-
 import 'package:spoon/application/packages/package.dart';
 
-///
-/// GradientExtension of type ThemeExtension<GradientExtension> is an extension
-/// to themeData enabling support of gradient in themeData.
-/// Other thing can be added here as extension to increase themeData functionality.
-///
+class GradientButton extends StatelessWidget {
+  const GradientButton({
+    Key? key,
+    required this.onPressed,
+    required this.child,
+  }) : super(key: key);
 
-@immutable
-class GradientExtension extends ThemeExtension<GradientExtension> {
-  const GradientExtension({
-    required this.button_gradient,
-  });
-
-  final Gradient button_gradient;
+  final Function()? onPressed;
+  final Widget? child;
 
   @override
-  ThemeExtension<GradientExtension> copyWith() {
-    // TODO: implement copyWith
-    throw UnimplementedError();
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300,
+      height: 50,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(17.0),
+        onTap: onPressed,
+        child: Ink(
+          decoration: BoxDecoration(
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black26,
+                  offset: Offset(0, 1),
+                  blurRadius: 2.0,
+                ),
+              ],
+              gradient: Theme.of(context).extension<GradientExtension>()?.primaryGradient,
+              borderRadius: BorderRadius.circular(17.0)),
+          child: Container(
+            alignment: Alignment.center,
+            child: this.child,
+          ),
+        ),
+      ),
+    );
   }
-
-  @override
-  ThemeExtension<GradientExtension> lerp(covariant ThemeExtension<GradientExtension>? other, double t) {
-    // TODO: implement lerp
-    throw UnimplementedError();
-  }
-
-// TODO: snipped code from flutter doc
-///@override
-///Gradient copyWith({Color? brandColor, Color? danger}) {
-///  return Gradient(
-///    brandColor: brandColor ?? this.brandColor,
-///    danger: danger ?? this.danger,
-///  );
-///}
-///
-///@override
-///Gradient lerp(Gradient? other, double t) {
-///  if (other is! Gradient) {
-///    return this;
-///  }
-///  return Gradient(
-///    brandColor: Color.lerp(brandColor, other.brandColor, t),
-///    danger: Color.lerp(danger, other.danger, t),
-///  );
-///}
 }

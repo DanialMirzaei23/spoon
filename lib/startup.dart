@@ -11,7 +11,7 @@ class StartUp extends StatelessWidget {
     return MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: Locale(GenerateCountry.FA),
+      locale: Locale(GenerateCountry.EN),
 
       // Initial Router
       initialRoute: onGenerateRouters.onHome,
@@ -24,9 +24,7 @@ class StartUp extends StatelessWidget {
         // onGenerateRouters.onRegister : (_)=>RegisterScreen(),
       },
       // Theme Default Mode
-      theme: ThemeData(
-        useMaterial3: true,
-        fontFamily: GenerateStyleFont.poppins),
+      theme: lightTheme
     );
   }
 }
