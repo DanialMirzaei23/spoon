@@ -5,5 +5,5 @@ class AppLocalizationsFa extends AppLocalizations {
   AppLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get hello_wellcome => ' سلام خوشامدید';
+  String get register => 'ثبت نام';
 }

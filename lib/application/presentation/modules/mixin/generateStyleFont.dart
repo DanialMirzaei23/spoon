@@ -1,6 +1,6 @@
 mixin GenerateStyleFont{
   // Font Family Generated
-  static String poppins = "poppins";
+  static String poppins = "Poppins";
 
   // Font Sized Generated
   static double title4 = 40.0;

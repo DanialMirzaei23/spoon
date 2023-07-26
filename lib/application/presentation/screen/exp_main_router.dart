@@ -15,3 +15,9 @@ export '../screen/onboarding/onboarding.dart';
 // Bloc ONBOARDING
 export '../screen/onboarding/logic/exp_main_router.dart';
 
+
+// Screen REGISTER
+export '../screen/register/register_screen.dart';
+// Bloc REGISTER
+export '../screen/register/logic/exp_main_router.dart';
+

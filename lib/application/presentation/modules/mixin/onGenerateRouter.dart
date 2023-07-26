@@ -1,5 +1,3 @@
-import '../../../packages/package.dart';
-import '../../screen/exp_main_router.dart';
 
 mixin onGenerateRouters{
    static String onBoarding = "/onBoarding";

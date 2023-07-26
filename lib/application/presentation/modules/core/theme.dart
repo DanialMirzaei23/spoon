@@ -1,56 +1,42 @@
-import 'package:spoon/application/packages/package.dart';
-import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
+// ignore_for_file: non_constant_identifier_names
 
-List<Color> allColors = const [
-  Color(0xFFFE7825),
-  Color(0xFFFFCD90),
-  Color(0xFFFFE1BC),
-  Color(0xFF313131),
-  Color(0xFF979797),
-  Color(0xFFDADADA),
-  Color(0xFFF7F7F3),
-  Color(0xFFFFFFFF),
-  Color(0xFFF13232),
-  Color(0xFFFFb21C),
-];
-///just leave it for now
-Color AllTextColor = Color(0xFF313131);
+import 'package:spoon/application/packages/package.dart';
+import 'package:spoon/application/presentation/modules/extension/exp_main_router.dart';
+import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
+import 'package:spoon/application/presentation/modules/widget/exp_main_router.dart';
+
+
 
 ThemeData lightTheme = ThemeData(
-  fontFamily: 'Poppins',
+  fontFamily: GenerateStyleFont.poppins,
   brightness: Brightness.light,
   textTheme: TextTheme(
-    titleLarge: TextStyle(
-      color: AllTextColor,
-      fontSize: 40.0,
+    titleLarge:  ToStyle(
+     fontSize: GenerateStyleFont.body4,
     ),
-    titleMedium: TextStyle(
-      color: AllTextColor,
-      fontSize: 32.0,
+    titleMedium: ToStyle(
+      fontSize: GenerateStyleFont.title3,
     ),
-    titleSmall: TextStyle(
-      color: AllTextColor,
-      fontSize: 24.0,
+    titleSmall: ToStyle(
+      fontSize: GenerateStyleFont.title2,
     ),
     headlineLarge: null,
-    headlineMedium: TextStyle(
-      color: AllTextColor,
-      fontSize: 20.0,
+    headlineMedium: ToStyle(
+      fontSize: GenerateStyleFont.headline2,
     ),
-    headlineSmall: TextStyle(
-      color: AllTextColor,
-      fontSize: 18.0,
+    headlineSmall: ToStyle(
+      fontSize: GenerateStyleFont.headline1,
     ),
 
-    bodyLarge: TextStyle(
-      fontSize: 16.0,
+    bodyLarge:  ToStyle(
+      fontSize: GenerateStyleFont.body6,
     ),
-    bodyMedium: TextStyle(
-      fontSize: 14.0,
+    bodyMedium:  ToStyle(
+      fontSize: GenerateStyleFont.body4,
     ),
     ///Use this for Caption
-    bodySmall: TextStyle(
-      fontSize: 12.0,
+    bodySmall:  ToStyle(
+      fontSize: GenerateStyleFont.caption,
     ),
 
     displayLarge: null,
@@ -65,55 +51,55 @@ ThemeData lightTheme = ThemeData(
   radioTheme: null,
   elevatedButtonTheme: null,
 
-  disabledColor: Color(0xFF979797),
+  disabledColor: GenerateDataColors.grey_neutral.toHex,
 
   iconTheme: null,
   cardTheme: null,
   primarySwatch: null,
   typography: null,
 
-  colorScheme: const ColorScheme(
+  colorScheme:  ColorScheme(
       brightness: Brightness.light,
 
-      primary: Color(0xFFFE7825),
-      onPrimary: Color(0xFFFFFFFF),
+      primary: GenerateDataColors.orange_primary.toHex,
+      onPrimary: GenerateDataColors.white_neutral.toHex,
 
-      primaryContainer: Color(0xFFFFFFFF),
-      onPrimaryContainer: Color(0xFF313131),
+      primaryContainer: GenerateDataColors.white_neutral.toHex,
+      onPrimaryContainer: GenerateDataColors.dark_neutral.toHex,
 
-      secondary: Color(0xFFFFE1BC),
-      onSecondary: Color(0xFFFE7825),
+      secondary: GenerateDataColors.accent.toHex,
+      onSecondary: GenerateDataColors.orange_primary.toHex,
 
-      secondaryContainer: Color(0xFFFFE1BC),
-      onSecondaryContainer: Color(0xFFFE7825),
+      secondaryContainer: GenerateDataColors.accent.toHex,
+      onSecondaryContainer: GenerateDataColors.orange_primary.toHex,
 
-      tertiary: Color(0xFFFFFFFF),
-      onTertiary: Color(0xFF313131),
+      tertiary: GenerateDataColors.white_neutral.toHex,
+      onTertiary: GenerateDataColors.dark_neutral.toHex,
 
-      tertiaryContainer: Color(0xFFFFFFFF),
-      onTertiaryContainer: Color(0xFF313131),
+      tertiaryContainer: GenerateDataColors.white_neutral.toHex,
+      onTertiaryContainer: GenerateDataColors.dark_neutral.toHex,
 
-      surface: Color(0xFFFFFFFF),
-      onSurface: Color(0xFF313131),
-      surfaceVariant: Color(0xFF979797),
+      surface: GenerateDataColors.white_neutral.toHex,
+      onSurface:GenerateDataColors.dark_neutral.toHex,
+      surfaceVariant: GenerateDataColors.grey_neutral.toHex,
       onSurfaceVariant: null,
 
       inverseSurface: null,
       onInverseSurface: null,
       inversePrimary: null,
 
-      background: Color(0xFFF7F7F3),
-      onBackground: Color(0xFF979797),
+      background: GenerateDataColors.lite_neutral.toHex,
+      onBackground: GenerateDataColors.dark_neutral.toHex,
 
       ///Error like TextField Invalid
-      error: Color(0xFFF13232),
-      onError: Color(0xFFFFFFFF),
+      error: GenerateDataColors.red.toHex,
+      onError: GenerateDataColors.white_neutral.toHex,
 
-      errorContainer: Color(0xFFF13232),
-      onErrorContainer: Color(0xFFFFFFFF),
+      errorContainer: GenerateDataColors.red.toHex,
+      onErrorContainer: GenerateDataColors.white_neutral.toHex,
 
-      outline: Color(0xFF979797),
-      outlineVariant: Color(0xFFDADADA),
+      outline: GenerateDataColors.grey_neutral.toHex,
+      outlineVariant: GenerateDataColors.grey1_neutral.toHex,
 
       surfaceTint: null,
       scrim: null,

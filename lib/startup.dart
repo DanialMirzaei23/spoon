@@ -14,17 +14,17 @@ class StartUp extends StatelessWidget {
       locale: Locale(GenerateCountry.EN),
 
       // Initial Router
-      initialRoute: onGenerateRouters.onHome,
+      initialRoute: onGenerateRouters.onRegister,
 
       // Data Router
       routes: {
         onGenerateRouters.onBoarding : (_)=>const OnBoarding(),
         onGenerateRouters.onHome : (_)=>const HomeScreen(),
         onGenerateRouters.onLogin : (_)=>const LoginScreen(),
-        // onGenerateRouters.onRegister : (_)=>RegisterScreen(),
+        onGenerateRouters.onRegister : (_)=>const RegisterScreen(),
       },
       // Theme Default Mode
-      theme: lightTheme
+      theme: lightTheme,
     );
   }
 }

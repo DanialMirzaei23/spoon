@@ -10,8 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        //child: AppLocalizations.of(context)!.hello_wellcome.toText(),
-        child: StyledText(AppLocalizations.of(context)!.hello_wellcome,textType: TextType.titleMedium),
+        child: context.toAppLocalization.register.toText(context: context),
       ),
     );
   }

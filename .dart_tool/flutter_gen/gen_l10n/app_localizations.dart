@@ -93,11 +93,11 @@ abstract class AppLocalizations {
     Locale('fa')
   ];
 
-  /// No description provided for @hello_wellcome.
+  /// No description provided for @register.
   ///
   /// In en, this message translates to:
-  /// **'Hello WellCome!'**
-  String get hello_wellcome;
+  /// **'Register'**
+  String get register;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
