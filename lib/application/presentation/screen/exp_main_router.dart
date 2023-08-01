@@ -10,6 +10,15 @@ export '../screen/login/login_screen.dart';
 // Bloc LOGIN
 export '../screen/login/logic/exp_main_router.dart';
 
+
+// Screen FUTURE-LOGIN/FORGET-PASSWORD
+export '../screen/login/future_login/forget_password_screen.dart';
+// Screen FUTURE-LOGIN/VERIFY-ACCOUNT
+export '../screen/login/future_verify/verify_account.dart';
+
+
+
+
 // Screen ONBOARDING
 export '../screen/onboarding/onboarding.dart';
 // Bloc ONBOARDING

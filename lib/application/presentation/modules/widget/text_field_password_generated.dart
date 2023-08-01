@@ -7,8 +7,8 @@ import 'package:spoon/application/presentation/modules/widget/exp_main_router.da
 
 import '../../../packages/package.dart';
 
-class TextFieldGenerated extends StatelessWidget {
-  const TextFieldGenerated({super.key, required this.nameField, required this.errText, required this.textEditingController, required this.textInputType, required this.textInputAction, required this.titleField});
+class TextFieldPasswordGenerated extends StatelessWidget {
+  const TextFieldPasswordGenerated({super.key, required this.nameField, required this.errText, required this.textEditingController, required this.textInputType, required this.textInputAction, required this.titleField});
   final String nameField , errText ,titleField;
   final TextEditingController textEditingController ;
   final TextInputType textInputType;
@@ -37,6 +37,7 @@ class TextFieldGenerated extends StatelessWidget {
                 // disabledBorder: InputBorder.none,
                 enabledBorder: OutlineInputBorder(borderSide: BorderSide.none,borderRadius: BorderRadius.circular(15)),
                 isDense: true,
+              suffixIcon: IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye,color: GenerateDataColors.grey_neutral.toHex,),),
               errorBorder:OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color:GenerateDataColors.red.toHex )),
               // errorText: 'danial',
               errorStyle: ToStyle(color: GenerateDataColors.red.toHex),

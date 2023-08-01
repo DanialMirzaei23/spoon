@@ -4,7 +4,7 @@ import 'package:spoon/application/presentation/modules/widget/exp_main_router.da
 import '../../../packages/package.dart';
 
 extension ConvertTextData on String {
-  toText({
+  Widget toText({
     required final BuildContext context ,
     final TextDirection textDirection = TextDirection.ltr,
     final TextAlign textAlign = TextAlign.left,
@@ -18,7 +18,7 @@ extension ConvertTextData on String {
         textAlign: textAlign,
         style: ToStyle(
             fontWeight: fontWeight,
-            fontSize: fontSize == 14.0 ? Theme.of(context).textTheme.bodyMedium!.fontSize!.toDouble() : fontSize ,
+            fontSize: fontSize == 14.0 ? GenerateStyleFont.body4 : fontSize ,
             color: color == Colors.black ? GenerateDataColors.dark_neutral.toHex : color),
       );
 }

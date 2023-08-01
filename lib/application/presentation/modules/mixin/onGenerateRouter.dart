@@ -4,4 +4,6 @@ mixin onGenerateRouters{
    static String onHome = "/onHome";
    static String onRegister = "/onRegister";
    static String onLogin = "/onLogin";
+   static String onForgetPassword = "/onForgetPassword";
+   static String onVerifyAccount = "/onVerifyAccount";
 }

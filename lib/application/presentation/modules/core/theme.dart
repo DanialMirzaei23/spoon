@@ -10,43 +10,6 @@ import 'package:spoon/application/presentation/modules/widget/exp_main_router.da
 ThemeData lightTheme = ThemeData(
   fontFamily: GenerateStyleFont.poppins,
   brightness: Brightness.light,
-  textTheme: TextTheme(
-    titleLarge:  ToStyle(
-     fontSize: GenerateStyleFont.body4,
-    ),
-    titleMedium: ToStyle(
-      fontSize: GenerateStyleFont.title3,
-    ),
-    titleSmall: ToStyle(
-      fontSize: GenerateStyleFont.title2,
-    ),
-    headlineLarge: null,
-    headlineMedium: ToStyle(
-      fontSize: GenerateStyleFont.headline2,
-    ),
-    headlineSmall: ToStyle(
-      fontSize: GenerateStyleFont.headline1,
-    ),
-
-    bodyLarge:  ToStyle(
-      fontSize: GenerateStyleFont.body6,
-    ),
-    bodyMedium:  ToStyle(
-      fontSize: GenerateStyleFont.body4,
-    ),
-    ///Use this for Caption
-    bodySmall:  ToStyle(
-      fontSize: GenerateStyleFont.caption,
-    ),
-
-    displayLarge: null,
-    displayMedium: null,
-    displaySmall: null,
-
-    labelLarge: null,
-    labelMedium: null,
-    labelSmall: null,
-  ),
   buttonTheme: null,
   radioTheme: null,
   elevatedButtonTheme: null,
@@ -61,6 +24,7 @@ ThemeData lightTheme = ThemeData(
   colorScheme:  ColorScheme(
       brightness: Brightness.light,
 
+
       primary: GenerateDataColors.orange_primary.toHex,
       onPrimary: GenerateDataColors.white_neutral.toHex,
 
@@ -71,7 +35,7 @@ ThemeData lightTheme = ThemeData(
       onSecondary: GenerateDataColors.orange_primary.toHex,
 
       secondaryContainer: GenerateDataColors.accent.toHex,
-      onSecondaryContainer: GenerateDataColors.orange_primary.toHex,
+      onSecondaryContainer: GenerateDataColors.orange1_btn.toHex,
 
       tertiary: GenerateDataColors.white_neutral.toHex,
       onTertiary: GenerateDataColors.dark_neutral.toHex,

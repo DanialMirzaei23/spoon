@@ -14,7 +14,7 @@ class StartUp extends StatelessWidget {
       locale: Locale(GenerateCountry.EN),
 
       // Initial Router
-      initialRoute: onGenerateRouters.onRegister,
+      initialRoute: onGenerateRouters.onLogin ,
 
       // Data Router
       routes: {
@@ -22,9 +22,18 @@ class StartUp extends StatelessWidget {
         onGenerateRouters.onHome : (_)=>const HomeScreen(),
         onGenerateRouters.onLogin : (_)=>const LoginScreen(),
         onGenerateRouters.onRegister : (_)=>const RegisterScreen(),
+        onGenerateRouters.onForgetPassword : (_)=>const ForgetPassword(),
+        onGenerateRouters.onVerifyAccount : (_)=>const VerifyAccount(),
+
       },
       // Theme Default Mode
-      theme: lightTheme,
+      theme: lightTheme.copyWith(
+        pageTransitionsTheme: const PageTransitionsTheme(
+          builders: <TargetPlatform,PageTransitionsBuilder>{
+            TargetPlatform.android: ZoomPageTransitionsBuilder(allowEnterRouteSnapshotting: true),
+          }
+        )
+      ),
     );
   }
 }

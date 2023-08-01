@@ -8,12 +8,10 @@ import '../../../packages/package.dart';
 
 
 class ToStyle extends TextStyle {
-  ToStyle({
+   ToStyle({
     this.color = Colors.black,
-    this.fontFamily = 'Poppins' ,
     this.fontSize = 14.0,
-    this.fontStyle = FontStyle.normal,
-    this.fontWeight =  FontWeight.normal,
+    this.fontWeight =  FontWeight.w600,
 });
 @override
   final Color color ;
@@ -21,16 +19,11 @@ class ToStyle extends TextStyle {
   final double fontSize ;
 @override
   final FontWeight fontWeight ;
-@override
-  final FontStyle fontStyle ;
-@override
-  final String fontFamily ;
   TextStyle build(BuildContext context) {
     return TextStyle(
       color: color == Colors.black ? GenerateDataColors.dark_neutral.toHex : color,
-      fontFamily: fontFamily == 'Poppins' ? GenerateStyleFont.poppins : fontFamily ,
+      fontFamily:  GenerateStyleFont.poppins ,
       fontSize: fontSize,
-      fontStyle: fontStyle,
       fontWeight: fontWeight
     );
   }

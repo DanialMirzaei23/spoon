@@ -2,8 +2,8 @@
 
 
 //Bloc-onboarding
-export '../logic/bloc/bloc.dart';
+export '../logic/bloc/bloc_step_slider.dart';
 //Event-onboarding
-export '../logic/event/eve_value.dart';
+export '../logic/event/eve_counter.dart';
 //State-onboarding
-export '../logic/state/ste_value.dart';
+export '../logic/state/ste_counter.dart';

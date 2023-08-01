@@ -5,3 +5,5 @@ extension GeneratedAppLocale on BuildContext{
   AppLocalizations get toAppLocalization => AppLocalizations.of(this)!;
   ThemeData get toTheme => Theme.of(this);
 }
+
+

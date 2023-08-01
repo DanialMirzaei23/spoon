@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import '../rounded_background_text.dart';
+import 'background_text_field.dart';
 
 const Color kDefaultRoundedTextBackgroundColor = Colors.blue;
 const double kDefaultInnerFactor = 8.0;
@@ -13,15 +13,15 @@ Color? foregroundColor(Color? backgroundColor) {
   return backgroundColor == null || backgroundColor.alpha == 0
       ? null
       : backgroundColor.computeLuminance() >= 0.5
-          ? Colors.black
-          : Colors.white;
+      ? Colors.black
+      : Colors.white;
 }
 
 @visibleForTesting
 List<List<LineMetricsHelper>> generateLineInfosForPainter(
-  TextPainter painter, [
-  double maxWidth = double.infinity,
-]) {
+    TextPainter painter, [
+      double maxWidth = double.infinity,
+    ]) {
   painter.layout(maxWidth: maxWidth);
   final metrics = painter.computeLineMetrics();
 
@@ -52,22 +52,22 @@ List<List<LineMetricsHelper>> generateLineInfosForPainter(
 class RoundedBackgroundText extends StatelessWidget {
   /// Creates a rounded background text with a single style.
   RoundedBackgroundText(
-    String text, {
-    super.key,
-    TextStyle? style,
-    this.textDirection,
-    this.textAlign,
-    this.backgroundColor,
-    this.textWidthBasis,
-    this.ellipsis,
-    this.locale,
-    this.strutStyle,
-    this.textScaleFactor = 1.0,
-    this.maxLines,
-    this.textHeightBehavior,
-    this.innerRadius = kDefaultInnerFactor,
-    this.outerRadius = kDefaultOuterFactor,
-  }) : text = TextSpan(text: text, style: style);
+      String text, {
+        super.key,
+        TextStyle? style,
+        this.textDirection,
+        this.textAlign,
+        this.backgroundColor,
+        this.textWidthBasis,
+        this.ellipsis,
+        this.locale,
+        this.strutStyle,
+        this.textScaleFactor = 1.0,
+        this.maxLines,
+        this.textHeightBehavior,
+        this.innerRadius = kDefaultInnerFactor,
+        this.outerRadius = kDefaultOuterFactor,
+      }) : text = TextSpan(text: text, style: style);
 
   /// Creates a rounded background text based on an [InlineSpan], that can have
   /// multiple styles
@@ -96,27 +96,27 @@ class RoundedBackgroundText extends StatelessWidget {
   ///   * [SelectableText], a run of selectable text with a single style.
   ///   * [RoundedBackgroundTextField], the editable version of this widget.
   static Widget selectable(
-    String text, {
-    Key? key,
-    FocusNode? focusNode,
-    bool autofocus = false,
-    TextSelectionControls? selectionControls,
-    TextStyle? style,
-    TextDirection? textDirection,
-    Color? backgroundColor,
-    TextAlign textAlign = TextAlign.start,
-    TextWidthBasis? textWidthBasis,
-    double textScaleFactor = 1.0,
-    double innerRadius = kDefaultInnerFactor,
-    double outerRadius = kDefaultOuterFactor,
-    double cursorWidth = 2.0,
-    Color? cursorColor,
-    double? cursorHeight,
-    Radius? cursorRadius,
-    SelectionChangedCallback? onSelectionChanged,
-    bool enableInteractiveSelection = true,
-    String? semanticsLabel,
-  }) {
+      String text, {
+        Key? key,
+        FocusNode? focusNode,
+        bool autofocus = false,
+        TextSelectionControls? selectionControls,
+        TextStyle? style,
+        TextDirection? textDirection,
+        Color? backgroundColor,
+        TextAlign textAlign = TextAlign.start,
+        TextWidthBasis? textWidthBasis,
+        double textScaleFactor = 1.0,
+        double innerRadius = kDefaultInnerFactor,
+        double outerRadius = kDefaultOuterFactor,
+        double cursorWidth = 2.0,
+        Color? cursorColor,
+        double? cursorHeight,
+        Radius? cursorRadius,
+        SelectionChangedCallback? onSelectionChanged,
+        bool enableInteractiveSelection = true,
+        String? semanticsLabel,
+      }) {
     return Stack(children: [
       RoundedBackgroundText(
         text,
@@ -155,27 +155,27 @@ class RoundedBackgroundText extends StatelessWidget {
   ///   * [SelectableText], a run of selectable text with a single style.
   ///   * [RoundedBackgroundTextField], the editable version of this widget.
   static Widget selectableRich(
-    TextSpan textSpan, {
-    Key? key,
-    FocusNode? focusNode,
-    bool autofocus = false,
-    TextSelectionControls? selectionControls,
-    TextStyle? style,
-    TextDirection? textDirection,
-    Color? backgroundColor,
-    TextAlign textAlign = TextAlign.start,
-    TextWidthBasis? textWidthBasis,
-    double textScaleFactor = 1.0,
-    double innerRadius = kDefaultInnerFactor,
-    double outerRadius = kDefaultOuterFactor,
-    MouseCursor? mouseCursor,
-    double cursorWidth = 2.0,
-    Color? cursorColor,
-    double? cursorHeight,
-    Radius? cursorRadius,
-    SelectionChangedCallback? onSelectionChanged,
-    bool enableInteractiveSelection = true,
-  }) {
+      TextSpan textSpan, {
+        Key? key,
+        FocusNode? focusNode,
+        bool autofocus = false,
+        TextSelectionControls? selectionControls,
+        TextStyle? style,
+        TextDirection? textDirection,
+        Color? backgroundColor,
+        TextAlign textAlign = TextAlign.start,
+        TextWidthBasis? textWidthBasis,
+        double textScaleFactor = 1.0,
+        double innerRadius = kDefaultInnerFactor,
+        double outerRadius = kDefaultOuterFactor,
+        MouseCursor? mouseCursor,
+        double cursorWidth = 2.0,
+        Color? cursorColor,
+        double? cursorHeight,
+        Radius? cursorRadius,
+        SelectionChangedCallback? onSelectionChanged,
+        bool enableInteractiveSelection = true,
+      }) {
     final controller = _TextSpanEditingController(textSpan: textSpan);
     return RoundedBackgroundTextField(
       key: key,
@@ -286,13 +286,13 @@ class RoundedBackgroundText extends StatelessWidget {
         ).merge(style),
       ),
       textDirection:
-          textDirection ?? Directionality.maybeOf(context) ?? TextDirection.ltr,
+      textDirection ?? Directionality.maybeOf(context) ?? TextDirection.ltr,
       textAlign: textAlign ?? defaultTextStyle.textAlign ?? TextAlign.start,
       backgroundColor: backgroundColor ?? Colors.transparent,
       textWidthBasis: textWidthBasis ?? defaultTextStyle.textWidthBasis,
       maxLines: maxLines ?? defaultTextStyle.maxLines,
       textHeightBehavior:
-          textHeightBehavior ?? defaultTextStyle.textHeightBehavior,
+      textHeightBehavior ?? defaultTextStyle.textHeightBehavior,
       ellipsis: ellipsis,
       locale: locale,
       strutStyle: strutStyle,
@@ -562,7 +562,7 @@ class _HighlightPainter extends CustomPainter {
           drawInnerCorner(info);
           // drawBottomLeftCorner(info);
         } else
-        // If the next one is more to the right, draw the bottom left
+          // If the next one is more to the right, draw the bottom left
         if (info.x < next.x) {
           // Draw bottom right corner
           drawBottomLeftCorner(info);
@@ -603,9 +603,9 @@ class _HighlightPainter extends CustomPainter {
       final innerFactor = info.innerFactor(this.innerFactor);
 
       void drawTopRightCorner(
-        LineMetricsHelper info, [
-        double? factor,
-      ]) {
+          LineMetricsHelper info, [
+            double? factor,
+          ]) {
         factor ??= outerFactor;
         final controlPoint = Offset(info.fullWidth, info.y);
         final endPoint = Offset(info.fullWidth - factor, info.y);
@@ -634,7 +634,7 @@ class _HighlightPainter extends CustomPainter {
 
           final controlPoint = Offset(info.fullWidth, formattedHeight);
           final endPoint =
-              Offset(info.fullWidth, formattedHeight - innerFactor);
+          Offset(info.fullWidth, formattedHeight - innerFactor);
 
           path.quadraticBezierTo(
               controlPoint.dx, controlPoint.dy, endPoint.dx, endPoint.dy);
@@ -881,9 +881,9 @@ class LineMetricsHelper {
   @override
   int get hashCode {
     return metrics.hashCode ^
-        length.hashCode ^
-        overridenWidth.hashCode ^
-        overridenX.hashCode;
+    length.hashCode ^
+    overridenWidth.hashCode ^
+    overridenX.hashCode;
   }
 
   @override
