@@ -44,5 +44,25 @@
   "terms_of_use": "شرایط استفاده",
   "success" : "موفق باشید ممنون",
   "the_email_is_incorrect" : "ایمیل نادرست است",
-  "good_email" : "همینطوری ادامه بده"
+  "good_email" : "همینطوری ادامه بده",
+  "my_orders" : "سفارشات من",
+  "there_is_no_order_yet" : "هنوز سفارشی ثبت نکردی",
+  "back_to_home" : "ّبرگشت به خانه",
+  "order_id" : "شناسه محصول",
+  "products" : "محصول",
+  "product" : "محصول",
+  "size" : "سایز",
+  "color" : "رنگ",
+  "quantity" : "تعداد",
+  "processing" : "در حال پردازش",
+  "delivered" : "تحویل داده شد",
+  "order_status" : "وضعیت سفارش",
+  "order_placed" : "سفارش ثبت شد",
+  "order_confirmed" : "سفارش تایید شد",
+  "order_processed" : "سفارش پردازش شد",
+  "ready_to_ship" : "آماده برای ارسال",
+  "out_to_delivery" : "ارسال شد",
+  "purchase_date" : "تاریخ خرید",
+  "track_order" : "پیگیری سفارش"
+  
 }

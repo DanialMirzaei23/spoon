@@ -46,7 +46,26 @@
   "terms_of_use": "Terms of Use",
   "success" : "Success Thank You",
   "the_email_is_incorrect" : "The email is incorrect",
-  "good_email" : "keep going like this"
+  "good_email" : "keep going like this",
+  "my_orders" : "My Orders",
+  "there_is_no_order_yet" : "There's no order yet!",
+  "back_to_home" : "Back To Home",
+  "order_id" : "Order ID",
+  "products" : "products",
+  "product" : "product",
+  "size" : "Size",
+  "color" : "Color",
+  "quantity" : "Quantity",
+  "processing" : "Processing",
+  "delivered" : "Delivered",
+  "order_status" : "Order status",
+  "order_placed" : "Order placed",
+  "order_confirmed" : "Order confirmed",
+  "order_processed" : "Order processed",
+  "ready_to_ship" : "Ready to ship",
+  "out_to_delivery" : "Out to deliery",
+  "purchase_date" : "Purchase date",
+  "track_order" : "Track order"
 
 
 

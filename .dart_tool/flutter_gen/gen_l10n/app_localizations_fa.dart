@@ -132,4 +132,61 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get good_email => 'همینطوری ادامه بده';
+
+  @override
+  String get my_orders => 'سفارشات من';
+
+  @override
+  String get there_is_no_order_yet => 'هنوز سفارشی ثبت نکردی';
+
+  @override
+  String get back_to_home => 'ّبرگشت به خانه';
+
+  @override
+  String get order_id => 'شناسه محصول';
+
+  @override
+  String get products => 'محصول';
+
+  @override
+  String get product => 'محصول';
+
+  @override
+  String get size => 'سایز';
+
+  @override
+  String get color => 'رنگ';
+
+  @override
+  String get quantity => 'تعداد';
+
+  @override
+  String get processing => 'در حال پردازش';
+
+  @override
+  String get delivered => 'تحویل داده شد';
+
+  @override
+  String get order_status => 'وضعیت سفارش';
+
+  @override
+  String get order_placed => 'سفارش ثبت شد';
+
+  @override
+  String get order_confirmed => 'سفارش تایید شد';
+
+  @override
+  String get order_processed => 'سفارش پردازش شد';
+
+  @override
+  String get ready_to_ship => 'آماده برای ارسال';
+
+  @override
+  String get out_to_delivery => 'ارسال شد';
+
+  @override
+  String get purchase_date => 'تاریخ خرید';
+
+  @override
+  String get track_order => 'پیگیری سفارش';
 }

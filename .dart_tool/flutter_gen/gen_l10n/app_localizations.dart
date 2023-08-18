@@ -350,6 +350,120 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'keep going like this'**
   String get good_email;
+
+  /// No description provided for @my_orders.
+  ///
+  /// In en, this message translates to:
+  /// **'My Orders'**
+  String get my_orders;
+
+  /// No description provided for @there_is_no_order_yet.
+  ///
+  /// In en, this message translates to:
+  /// **'There\'s no order yet!'**
+  String get there_is_no_order_yet;
+
+  /// No description provided for @back_to_home.
+  ///
+  /// In en, this message translates to:
+  /// **'Back To Home'**
+  String get back_to_home;
+
+  /// No description provided for @order_id.
+  ///
+  /// In en, this message translates to:
+  /// **'Order ID'**
+  String get order_id;
+
+  /// No description provided for @products.
+  ///
+  /// In en, this message translates to:
+  /// **'products'**
+  String get products;
+
+  /// No description provided for @product.
+  ///
+  /// In en, this message translates to:
+  /// **'product'**
+  String get product;
+
+  /// No description provided for @size.
+  ///
+  /// In en, this message translates to:
+  /// **'Size'**
+  String get size;
+
+  /// No description provided for @color.
+  ///
+  /// In en, this message translates to:
+  /// **'Color'**
+  String get color;
+
+  /// No description provided for @quantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Quantity'**
+  String get quantity;
+
+  /// No description provided for @processing.
+  ///
+  /// In en, this message translates to:
+  /// **'Processing'**
+  String get processing;
+
+  /// No description provided for @delivered.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivered'**
+  String get delivered;
+
+  /// No description provided for @order_status.
+  ///
+  /// In en, this message translates to:
+  /// **'Order status'**
+  String get order_status;
+
+  /// No description provided for @order_placed.
+  ///
+  /// In en, this message translates to:
+  /// **'Order placed'**
+  String get order_placed;
+
+  /// No description provided for @order_confirmed.
+  ///
+  /// In en, this message translates to:
+  /// **'Order confirmed'**
+  String get order_confirmed;
+
+  /// No description provided for @order_processed.
+  ///
+  /// In en, this message translates to:
+  /// **'Order processed'**
+  String get order_processed;
+
+  /// No description provided for @ready_to_ship.
+  ///
+  /// In en, this message translates to:
+  /// **'Ready to ship'**
+  String get ready_to_ship;
+
+  /// No description provided for @out_to_delivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Out to deliery'**
+  String get out_to_delivery;
+
+  /// No description provided for @purchase_date.
+  ///
+  /// In en, this message translates to:
+  /// **'Purchase date'**
+  String get purchase_date;
+
+  /// No description provided for @track_order.
+  ///
+  /// In en, this message translates to:
+  /// **'Track order'**
+  String get track_order;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

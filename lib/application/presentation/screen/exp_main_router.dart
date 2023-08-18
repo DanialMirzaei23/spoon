@@ -30,3 +30,12 @@ export '../screen/register/register_screen.dart';
 // Bloc REGISTER
 export '../screen/register/logic/exp_main_router.dart';
 
+
+// Screen ORDERS
+export '../screen/orders/orders_screen.dart';
+// Bloc Orders
+export '../screen/orders/logic/exp_main_router.dart';
+
+
+// Screen ORDER-STATUS
+export '../screen/orders/order_status/order_status_screen.dart';

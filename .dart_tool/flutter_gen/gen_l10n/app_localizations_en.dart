@@ -132,4 +132,61 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get good_email => 'keep going like this';
+
+  @override
+  String get my_orders => 'My Orders';
+
+  @override
+  String get there_is_no_order_yet => 'There\'s no order yet!';
+
+  @override
+  String get back_to_home => 'Back To Home';
+
+  @override
+  String get order_id => 'Order ID';
+
+  @override
+  String get products => 'products';
+
+  @override
+  String get product => 'product';
+
+  @override
+  String get size => 'Size';
+
+  @override
+  String get color => 'Color';
+
+  @override
+  String get quantity => 'Quantity';
+
+  @override
+  String get processing => 'Processing';
+
+  @override
+  String get delivered => 'Delivered';
+
+  @override
+  String get order_status => 'Order status';
+
+  @override
+  String get order_placed => 'Order placed';
+
+  @override
+  String get order_confirmed => 'Order confirmed';
+
+  @override
+  String get order_processed => 'Order processed';
+
+  @override
+  String get ready_to_ship => 'Ready to ship';
+
+  @override
+  String get out_to_delivery => 'Out to deliery';
+
+  @override
+  String get purchase_date => 'Purchase date';
+
+  @override
+  String get track_order => 'Track order';
 }

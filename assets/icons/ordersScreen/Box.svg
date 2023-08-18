@@ -1,0 +1,27 @@
+<svg width="242" height="236" viewBox="0 0 242 236" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="120.5" cy="129.5" r="106.5" fill="#FFA24C" fill-opacity="0.3"/>
+<path d="M145.995 99.8319C154.156 96.4195 159.477 78.0633 148.996 61.6344C134.825 39.422 109.825 29.5577 90.3712 36.63C72.2455 43.2194 79.6754 62.3657 100.778 53.4038C121.881 44.4418 112.159 9.78899 83.839 7.74092" stroke="#FE7825" stroke-width="2" stroke-dasharray="6 8"/>
+<ellipse cx="73.5906" cy="3.10781" rx="3" ry="2.97345" transform="rotate(-92.1172 73.5906 3.10781)" fill="#FE7825"/>
+<ellipse cx="73.5906" cy="12.1078" rx="3" ry="2.97345" transform="rotate(-92.1172 73.5906 12.1078)" fill="#FE7825"/>
+<ellipse cx="73.6085" cy="7.72971" rx="3" ry="3.5" transform="rotate(-92.1172 73.6085 7.72971)" fill="#FE7825"/>
+<path d="M220.244 79.0183H89.1946V212.532H220.244V79.0183Z" fill="#DADADA"/>
+<path d="M220.244 79.0183H89.1948V212.532H220.244V79.0183Z" fill="#FE7825"/>
+<path d="M220.244 79.0183H89.1948V212.532H220.244V79.0183Z" fill="url(#paint0_linear_514_7424)" fill-opacity="0.5"/>
+<path d="M21.5401 212.532H89.1946L89.1946 79.018H21.5401L21.5401 212.532Z" fill="#FFA24D"/>
+<path d="M21.5401 212.532H89.1946L89.1946 79.018H21.5401L21.5401 212.532Z" fill="url(#paint1_linear_514_7424)"/>
+<path d="M242 107.889H110.971L89.2126 79H220.242L242 107.889Z" fill="#FFA53B"/>
+<path d="M67.4745 107.908H0L21.7582 79.0195H89.2128L67.4745 107.908Z" fill="#FF823C"/>
+<defs>
+<linearGradient id="paint0_linear_514_7424" x1="206" y1="422" x2="33.5207" y2="80.1517" gradientUnits="userSpaceOnUse">
+<stop offset="0.34375" stop-color="#DD4200"/>
+<stop offset="0.609375" stop-color="#FF4F00"/>
+<stop offset="0.848958" stop-color="#FF8A00"/>
+</linearGradient>
+<linearGradient id="paint1_linear_514_7424" x1="-140.31" y1="120.099" x2="123.065" y2="144.414" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DD4200"/>
+<stop offset="0.144422" stop-color="#FF4F00"/>
+<stop offset="0.392144" stop-color="#FF8A00"/>
+<stop offset="1" stop-color="#FFAE4F"/>
+</linearGradient>
+</defs>
+</svg>
