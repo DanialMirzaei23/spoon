@@ -14,4 +14,5 @@ mixin GenerateStyleFont{
   static double body4 = 14.0;
 
   static double caption = 12.0;
+  static double caption1 = 10.0;
 }

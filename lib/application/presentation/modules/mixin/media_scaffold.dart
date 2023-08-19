@@ -125,4 +125,54 @@ mixin MediaScaffold {
         ),
         body: child,
       );
+
+  static Widget homeScaffold({
+    required BuildContext context,
+    required String titleAppBar,
+    required void Function() reActionIconAppBar,
+    required Widget child,
+}) => Scaffold(
+    backgroundColor: context.toTheme.colorScheme.background,
+    appBar: AppBar(
+      elevation: 0.0,
+      surfaceTintColor: context.toTheme.colorScheme.background,
+      shadowColor: context.toTheme.colorScheme.background,
+      leading: Container(
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            color: context.toTheme.colorScheme.onPrimary,
+            borderRadius: BorderRadius.circular(15 )),
+        child: SvgGenerated(
+            generate: Generate.asset,
+            router: GenerateDataImages.icon_profile,
+            width: context.mediaQueryWidth(context) * .03,
+            height: context.mediaQueryHeight(context) * .03),
+      ).generateButton(onTap: reActionIconAppBar).toSpace(
+          context: context, top: .01, bottom: .01, left: .03, right: .01),
+      actions: [
+        Container(
+          height: 50,
+          width: 40,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: context.toTheme.colorScheme.onPrimary,
+              borderRadius: BorderRadius.circular(15 )),
+          child: SvgGenerated(
+              generate: Generate.asset,
+              router: GenerateDataImages.icon_setting,
+              width: context.mediaQueryWidth(context) * .03,
+              height: context.mediaQueryHeight(context) * .03),
+        ).generateButton(onTap: reActionIconAppBar).toSpace(
+            context: context, top: .01, bottom: .01, left: .03, right: .03)
+      ],
+
+      backgroundColor: context.toTheme.colorScheme.background,
+      title: titleAppBar.toText(
+          context: context,
+          color: context.toTheme.colorScheme.onBackground,
+          fontWeight: FontWeight.w600),
+      centerTitle: true,
+    ),
+    body: SingleChildScrollView(child: child),
+  );
 }

@@ -13,7 +13,7 @@ class StartUp extends StatelessWidget {
       locale: Locale(GenerateCountry.EN),
 
       // Initial Router
-      initialRoute: onGenerateRouters.onOrderStatus,
+      initialRoute: onGenerateRouters.onHome,
 
       // Data Router
       routes: {

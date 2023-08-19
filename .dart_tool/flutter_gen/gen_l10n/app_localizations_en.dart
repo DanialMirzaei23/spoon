@@ -189,4 +189,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get track_order => 'Track order';
+
+  @override
+  String get beautiful_clothes => 'Beautiful Clothes';
+
+  @override
+  String get the_joy_of_premium_fashion => 'The joy of premium fashion';
+
+  @override
+  String get buy_now => 'Buy Now';
 }

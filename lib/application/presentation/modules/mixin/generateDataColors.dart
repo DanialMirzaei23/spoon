@@ -16,7 +16,11 @@ mixin GenerateDataColors {
   static String lite_neutral = "#F2F2F3";
 
   static String white_neutral = "#FFFFFF";
+
   static String success = "#00E709";
+
+
+  static String pale_pink = "#FFDEBC";
 
   //linear gradient
   static String orange_btn = "#E54500";

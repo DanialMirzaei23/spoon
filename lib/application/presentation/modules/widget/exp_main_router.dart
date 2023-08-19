@@ -19,3 +19,6 @@ export '../extension/handler_widget_error_mode.dart';
 export 'orders_item_button.dart';
 export 'orders_item.dart';
 export 'order_status_step.dart';
+export 'search.dart';
+export 'box_home.dart';
+export 'box_arrival.dart';
