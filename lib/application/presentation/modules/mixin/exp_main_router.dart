@@ -10,3 +10,4 @@ export 'logic_bloc.dart';
 export 'media_scaffold.dart';
 export 'controller.dart';
 export 'validateRegExp.dart';
+export 'generateDataIconNavigationBar.dart';

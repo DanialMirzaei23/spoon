@@ -1,7 +1,10 @@
-import 'package:flutter/services.dart';
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/rendering.dart';
 import 'package:spoon/application/presentation/modules/extension/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/widget/exp_main_router.dart';
+import 'package:spoon/application/presentation/modules/widget/shapenavigator.dart';
 
 import '../../../packages/package.dart';
 
@@ -131,48 +134,92 @@ mixin MediaScaffold {
     required String titleAppBar,
     required void Function() reActionIconAppBar,
     required Widget child,
-}) => Scaffold(
-    backgroundColor: context.toTheme.colorScheme.background,
-    appBar: AppBar(
-      elevation: 0.0,
-      surfaceTintColor: context.toTheme.colorScheme.background,
-      shadowColor: context.toTheme.colorScheme.background,
-      leading: Container(
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-            color: context.toTheme.colorScheme.onPrimary,
-            borderRadius: BorderRadius.circular(15 )),
-        child: SvgGenerated(
-            generate: Generate.asset,
-            router: GenerateDataImages.icon_profile,
-            width: context.mediaQueryWidth(context) * .03,
-            height: context.mediaQueryHeight(context) * .03),
-      ).generateButton(onTap: reActionIconAppBar).toSpace(
-          context: context, top: .01, bottom: .01, left: .03, right: .01),
-      actions: [
-        Container(
-          height: 50,
-          width: 40,
-          alignment: Alignment.center,
+  }) =>
+      Scaffold(
+        backgroundColor: context.toTheme.colorScheme.background,
+        appBar: AppBar(
+          elevation: 0.0,
+          surfaceTintColor: context.toTheme.colorScheme.background,
+          shadowColor: context.toTheme.colorScheme.background,
+          leading: Container(
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+                color: context.toTheme.colorScheme.onPrimary,
+                borderRadius: BorderRadius.circular(15)),
+            child: SvgGenerated(
+                generate: Generate.asset,
+                router: GenerateDataImages.icon_profile,
+                width: context.mediaQueryWidth(context) * .03,
+                height: context.mediaQueryHeight(context) * .03),
+          ).generateButton(onTap: reActionIconAppBar).toSpace(
+              context: context, top: .01, bottom: .01, left: .03, right: .01),
+          actions: [
+            Container(
+              height: 50,
+              width: 40,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  color: context.toTheme.colorScheme.onPrimary,
+                  borderRadius: BorderRadius.circular(15)),
+              child: SvgGenerated(
+                  generate: Generate.asset,
+                  router: GenerateDataImages.icon_setting,
+                  width: context.mediaQueryWidth(context) * .03,
+                  height: context.mediaQueryHeight(context) * .03),
+            ).generateButton(onTap: reActionIconAppBar).toSpace(
+                context: context, top: .01, bottom: .01, left: .03, right: .03)
+          ],
+          backgroundColor: context.toTheme.colorScheme.background,
+          title: titleAppBar.toText(
+              context: context,
+              color: context.toTheme.colorScheme.onBackground,
+              fontWeight: FontWeight.w600),
+          centerTitle: true,
+        ),
+        body: SingleChildScrollView(child: child),
+        bottomNavigationBar: Container(
+          height: context.mediaQueryHeight(context)*.08,
           decoration: BoxDecoration(
-              color: context.toTheme.colorScheme.onPrimary,
-              borderRadius: BorderRadius.circular(15 )),
-          child: SvgGenerated(
-              generate: Generate.asset,
-              router: GenerateDataImages.icon_setting,
-              width: context.mediaQueryWidth(context) * .03,
-              height: context.mediaQueryHeight(context) * .03),
-        ).generateButton(onTap: reActionIconAppBar).toSpace(
-            context: context, top: .01, bottom: .01, left: .03, right: .03)
-      ],
+              color: GenerateDataColors.white_neutral.toHex,
+              borderRadius: const BorderRadius.only(
+                topRight: Radius.circular(15),
+                topLeft: Radius.circular(15),
+              )
+          ),
+          child: ListView.builder(
+              scrollDirection: Axis.horizontal,itemBuilder: (context, index) {
+            return Stack(
+              alignment: Alignment.center,
+              children: [
+                Align(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
 
-      backgroundColor: context.toTheme.colorScheme.background,
-      title: titleAppBar.toText(
-          context: context,
-          color: context.toTheme.colorScheme.onBackground,
-          fontWeight: FontWeight.w600),
-      centerTitle: true,
-    ),
-    body: SingleChildScrollView(child: child),
-  );
+                    children: [
+                      Icon(GenerateNavigationBar.dataIcon[index]),
+                      GenerateNavigationBar.dataTextIcon[index].toText(context: context),
+                    ],
+                  ),
+                ),
+
+              ],
+            );
+          },itemCount: GenerateNavigationBar.dataIcon.length,itemExtent: 95),
+        ).toSpace(context: context,right: .05,left: .05),
+      );
 }
+
+
+//CustomPaint(isComplex: false,
+//             painter: ShapeNavigator(),
+//             child: const Center(
+//               child: Text(
+//                 'Once upon a time...',
+//                 style: TextStyle(
+//                   fontSize: 10.0,
+//                   fontWeight: FontWeight.w900,
+//                   color: Color(0xFFFFFFFF),
+//                 ),
+//               ),
+//             ),
+//           ),

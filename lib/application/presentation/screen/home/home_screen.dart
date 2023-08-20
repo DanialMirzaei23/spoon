@@ -11,14 +11,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MediaScaffold.homeScaffold(context: context,
-        titleAppBar: "da",
+        titleAppBar: "da",// <------ No l10n file
         reActionIconAppBar: (){},
       child:[
         toSpaceVertical(context: context,size: .01),
         SizedBox(
           child: Row(
             children: [
-            Expanded(flex: 1,child: SearchGenerate(),),
+            Expanded(flex: 1,child: SearchGenerate(),),// <------ No l10n file
             toSpaceLine(context: context,size: .02),
             Expanded(flex: 0,child:
             Container(
@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
         ),
         toSpaceVertical(context: context,size: .03),
         SizedBox(
-          child: BoxHome(),
+          child: BoxHome(), // <------ No l10n file
         ),
         toSpaceVertical(context: context,size: .03),
         SizedBox(
@@ -56,9 +56,9 @@ class HomeScreen extends StatelessWidget {
               Expanded(child: 'see all'.toText(context: context,fontSize: GenerateStyleFont.body4,fontWeight: FontWeight.w700,color: GenerateDataColors.orange_primary.toHex),)
             ],
           ),
-        ),
+        ),// <------ No l10n file
         toSpaceVertical(context: context,size: .03),
-        BoxArrival()
+        BoxArrival() // <------ No l10n file
       ].toItem.toSpace(context: context,left: .05,right: .05),
     );
   }

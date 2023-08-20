@@ -48,9 +48,6 @@ class SearchGenerate extends StatelessWidget {
       ] ;
     },isFullScreen: true,
       viewHintText: "Search2...",
-      viewBuilder: (suggestions) {
-        return suggestions.first;
-      },
       viewElevation: 0.0,
       // searchController: Controller.searchAnchor,
 
