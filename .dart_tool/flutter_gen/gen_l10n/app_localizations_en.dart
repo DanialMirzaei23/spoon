@@ -189,4 +189,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get track_order => 'Track order';
+
+  @override
+  String get reviews => 'reviews';
+
+  @override
+  String get description => 'Description';
+
+  @override
+  String get read_more => 'Read more';
 }

@@ -63,6 +63,9 @@
   "ready_to_ship" : "آماده برای ارسال",
   "out_to_delivery" : "ارسال شد",
   "purchase_date" : "تاریخ خرید",
-  "track_order" : "پیگیری سفارش"
+  "track_order" : "پیگیری سفارش",
+  "reviews" : "نظر",
+  "description" : "توضیحات",
+  "read_more" : "بیشتر"
   
 }

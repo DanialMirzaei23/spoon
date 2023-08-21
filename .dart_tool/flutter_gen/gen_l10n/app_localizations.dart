@@ -464,6 +464,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Track order'**
   String get track_order;
+
+  /// No description provided for @reviews.
+  ///
+  /// In en, this message translates to:
+  /// **'reviews'**
+  String get reviews;
+
+  /// No description provided for @description.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get description;
+
+  /// No description provided for @read_more.
+  ///
+  /// In en, this message translates to:
+  /// **'Read more'**
+  String get read_more;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -189,4 +189,13 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get track_order => 'پیگیری سفارش';
+
+  @override
+  String get reviews => 'نظر';
+
+  @override
+  String get description => 'توضیحات';
+
+  @override
+  String get read_more => 'بیشتر';
 }
