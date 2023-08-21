@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';
 import 'package:spoon/application/presentation/modules/extension/exp_main_router.dart';
@@ -137,6 +136,7 @@ mixin MediaScaffold {
   }) =>
       Scaffold(
         backgroundColor: context.toTheme.colorScheme.background,
+        extendBody: true,
         appBar: AppBar(
           elevation: 0.0,
           surfaceTintColor: context.toTheme.colorScheme.background,
@@ -177,35 +177,39 @@ mixin MediaScaffold {
           centerTitle: true,
         ),
         body: SingleChildScrollView(child: child),
-        bottomNavigationBar: Container(
-          height: context.mediaQueryHeight(context)*.08,
-          decoration: BoxDecoration(
-              color: GenerateDataColors.white_neutral.toHex,
-              borderRadius: const BorderRadius.only(
-                topRight: Radius.circular(15),
-                topLeft: Radius.circular(15),
-              )
-          ),
-          child: ListView.builder(
-              scrollDirection: Axis.horizontal,itemBuilder: (context, index) {
-            return Stack(
-              alignment: Alignment.center,
-              children: [
-                Align(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-
+        bottomNavigationBar: CustomPaint(
+          painter: ShapeNavigator(),
+          child: Container(
+            height: context.mediaQueryHeight(context) * .14,
+            decoration: BoxDecoration(
+                // color: Colors.transparent,
+                borderRadius: const BorderRadius.only(
+              topRight: Radius.circular(15),
+              topLeft: Radius.circular(15),
+            )),
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return Stack(
+                    alignment: Alignment.center,
                     children: [
-                      Icon(GenerateNavigationBar.dataIcon[index]),
-                      GenerateNavigationBar.dataTextIcon[index].toText(context: context),
+                      Align(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(GenerateNavigationBar.dataIcon[index]),
+                            GenerateNavigationBar.dataTextIcon[index]
+                                .toText(context: context),
+                          ],
+                        ),
+                      ),
                     ],
-                  ),
-                ),
-
-              ],
-            );
-          },itemCount: GenerateNavigationBar.dataIcon.length,itemExtent: 95),
-        ).toSpace(context: context,right: .05,left: .05),
+                  );
+                },
+                itemCount: GenerateNavigationBar.dataIcon.length,
+                itemExtent: 95),
+          ).toSpace(context: context, right: .05, left: .05),
+        ),
       );
 }
 
@@ -223,3 +227,34 @@ mixin MediaScaffold {
 //               ),
 //             ),
 //           ),
+
+
+// Container(
+//             height: context.mediaQueryHeight(context)*.08,
+//             decoration: BoxDecoration(
+//                 color: GenerateDataColors.white_neutral.toHex,
+//                 borderRadius: const BorderRadius.only(
+//                   topRight: Radius.circular(15),
+//                   topLeft: Radius.circular(15),
+//                 )
+//             ),
+//             child: ListView.builder(
+//                 scrollDirection: Axis.horizontal,itemBuilder: (context, index) {
+//               return Stack(
+//                 alignment: Alignment.center,
+//                 children: [
+//                   Align(
+//                     child: Column(
+//                       mainAxisAlignment: MainAxisAlignment.center,
+        
+//                       children: [
+//                         Icon(GenerateNavigationBar.dataIcon[index]),
+//                         GenerateNavigationBar.dataTextIcon[index].toText(context: context),
+//                       ],
+//                     ),
+//                   ),
+        
+//                 ],
+//               );
+//             },itemCount: GenerateNavigationBar.dataIcon.length,itemExtent: 95),
+//           ).toSpace(context: context,right: .05,left: .05)
