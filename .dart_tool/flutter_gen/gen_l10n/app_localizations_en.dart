@@ -198,4 +198,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get read_more => 'Read more';
+
+  @override
+  String get add_to_cart => 'Add To Cart';
 }

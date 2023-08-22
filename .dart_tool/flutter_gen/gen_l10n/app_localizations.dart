@@ -482,6 +482,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Read more'**
   String get read_more;
+
+  /// No description provided for @add_to_cart.
+  ///
+  /// In en, this message translates to:
+  /// **'Add To Cart'**
+  String get add_to_cart;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

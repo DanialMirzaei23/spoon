@@ -43,3 +43,5 @@ export '../screen/orders/order_status/order_status_screen.dart';
 
 // Screen Prouct
 export './product/product_screen.dart';
+// Bloc Product
+export './product/logic/exp_mian_router.dart';

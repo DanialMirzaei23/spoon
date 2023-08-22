@@ -198,4 +198,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get read_more => 'بیشتر';
+
+  @override
+  String get add_to_cart => 'افزودن به سبد خرید';
 }
