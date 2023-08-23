@@ -22,3 +22,4 @@ export 'order_status_step.dart';
 export 'search.dart';
 export 'box_home.dart';
 export 'box_arrival.dart';
+export 'floatingAction.dart';

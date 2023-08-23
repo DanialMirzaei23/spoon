@@ -6,12 +6,13 @@ mixin GenerateNavigationBar{
     CupertinoIcons.home,
     CupertinoIcons.square_grid_2x2,
     CupertinoIcons.heart,
-    // CupertinoIcons.shopping_cart,
+    CupertinoIcons.shopping_cart,
   ];
   static List<String> dataTextIcon = [
     "Home",
     "Menu",
     "Favorites",
+    " "
     // CupertinoIcons.shopping_cart,
   ];
 }
