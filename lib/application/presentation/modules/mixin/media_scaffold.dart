@@ -1,10 +1,7 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/rendering.dart';
 import 'package:spoon/application/presentation/modules/extension/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/widget/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/widget/shapenavigator.dart';
-
 import '../../../packages/package.dart';
 
 mixin MediaScaffold {
@@ -177,84 +174,60 @@ mixin MediaScaffold {
           centerTitle: true,
         ),
         body: SingleChildScrollView(child: child),
-        bottomNavigationBar: CustomPaint(
-          painter: ShapeNavigator(),
-          child: Container(
-            height: context.mediaQueryHeight(context) * .14,
-            decoration: BoxDecoration(
-                // color: Colors.transparent,
-                borderRadius: const BorderRadius.only(
-              topRight: Radius.circular(15),
-              topLeft: Radius.circular(15),
-            )),
-            child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  return Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Align(
+        bottomNavigationBar: Align(
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              CustomPaint(isComplex: true,
+              painter: ShapeNavigator(),
+              child: Container(
+                height: context.mediaQueryHeight(context) * .12,
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(15),
+                      topLeft: Radius.circular(15),
+                    )),
+                child: ListView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return Align(
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.values[5],
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Icon(GenerateNavigationBar.dataIcon[index]),
+                            index == 3
+                                ? FloatingAction(
+                              onTap: () {},
+                              child: Icon(
+                                  GenerateNavigationBar.dataIcon[3]),
+                            )
+                                : Icon(GenerateNavigationBar.dataIcon[index]),
+                            // SizedBox(height: 10),
                             GenerateNavigationBar.dataTextIcon[index]
                                 .toText(context: context),
                           ],
                         ),
-                      ),
-                    ],
-                  );
-                },
-                itemCount: GenerateNavigationBar.dataIcon.length,
-                itemExtent: 95),
-          ).toSpace(context: context, right: .05, left: .05),
+                      );
+                    },
+                    itemCount: GenerateNavigationBar.dataIcon.length,
+                    itemExtent: 95),
+              ).toSpace(context: context, right: .05, left: .05),
+            ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Container(
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: GenerateDataColors.white_neutral.toHex,width: 4),
+                      color: GenerateDataColors.orange_primary.toHex
+                  ),
+                  child: "0".toText(context: context).toSpaceAll(context: context,value: .02),
+                ).toSpace(context: context,bottom: .09),
+              ).toSpace(context: context,right: .05),
+            ] ,
+          ),
         ),
       );
 }
 
-
-//CustomPaint(isComplex: false,
-//             painter: ShapeNavigator(),
-//             child: const Center(
-//               child: Text(
-//                 'Once upon a time...',
-//                 style: TextStyle(
-//                   fontSize: 10.0,
-//                   fontWeight: FontWeight.w900,
-//                   color: Color(0xFFFFFFFF),
-//                 ),
-//               ),
-//             ),
-//           ),
-
-
-// Container(
-//             height: context.mediaQueryHeight(context)*.08,
-//             decoration: BoxDecoration(
-//                 color: GenerateDataColors.white_neutral.toHex,
-//                 borderRadius: const BorderRadius.only(
-//                   topRight: Radius.circular(15),
-//                   topLeft: Radius.circular(15),
-//                 )
-//             ),
-//             child: ListView.builder(
-//                 scrollDirection: Axis.horizontal,itemBuilder: (context, index) {
-//               return Stack(
-//                 alignment: Alignment.center,
-//                 children: [
-//                   Align(
-//                     child: Column(
-//                       mainAxisAlignment: MainAxisAlignment.center,
-        
-//                       children: [
-//                         Icon(GenerateNavigationBar.dataIcon[index]),
-//                         GenerateNavigationBar.dataTextIcon[index].toText(context: context),
-//                       ],
-//                     ),
-//                   ),
-        
-//                 ],
-//               );
-//             },itemCount: GenerateNavigationBar.dataIcon.length,itemExtent: 95),
-//           ).toSpace(context: context,right: .05,left: .05)

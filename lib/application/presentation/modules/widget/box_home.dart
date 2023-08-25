@@ -33,7 +33,7 @@ class BoxHome extends StatelessWidget {
                 color: GenerateDataColors.orange1_btn.toHex,
                 fontSize: GenerateStyleFont.body6,
                 fontWeight: FontWeight.bold),
-            toSpaceVertical(context: context, size: .02),
+            toSpaceVertical(context: context, size: .01),
             context.toAppLocalization.the_joy_of_premium_fashion.toText(
                 context: context,
                 color: GenerateDataColors.orange1_btn.toHex,

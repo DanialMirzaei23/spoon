@@ -28,18 +28,18 @@ class HomeScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10)
               ),
               child: SvgGenerated(generate: Generate.asset, router: GenerateDataImages.setting_group,
-                width:context.mediaQueryWidth(context)*.03 ,
-                height:context.mediaQueryHeight(context)*.03 ,
-              ).toSpace(context: context,right: .03,left: .03,bottom: .02,top: .02),
+                width:context.mediaQueryWidth(context)*.02 ,
+                height:context.mediaQueryHeight(context)*.02 ,
+              ).toSpace(context: context,right: .035,left: .035,bottom: .022,top: .022),
             ).generateButton(onTap: (){}),),
             ],
           ),
         ),
-        toSpaceVertical(context: context,size: .03),
+        toSpaceVertical(context: context,size: .02),
         SizedBox(
           child: BoxHome(), // <------ No l10n file
         ),
-        toSpaceVertical(context: context,size: .03),
+        toSpaceVertical(context: context,size: .015),
         SizedBox(
           child: Row(
 
@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),// <------ No l10n file
-        toSpaceVertical(context: context,size: .03),
+        toSpaceVertical(context: context,size: .01),
         BoxArrival() // <------ No l10n file
       ].toItem.toSpace(context: context,left: .05,right: .05),
     );

@@ -32,7 +32,7 @@ class GradientButton extends StatelessWidget {
         onTap: onPressed,
         child: Container(
           alignment: Alignment.center,
-          child: title?.toText(
+          child:title?.toText(
               context: context,
               color: context.toTheme.colorScheme.onPrimary,
               fontSize: GenerateStyleFont.body6,
