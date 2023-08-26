@@ -1,4 +1,4 @@
-import 'dart:math';
+
 
 import 'package:spoon/application/presentation/modules/extension/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
@@ -21,21 +21,21 @@ class ShapeNavigator extends CustomPainter {
 
 
 
-    path1.lineTo(size.width * .68, 0);
+    path1.lineTo(size.width * .65, 0);
     path1.quadraticBezierTo(
-        size.width * .76, 0, size.width * .76, size.height * .28);
+        size.width * .73, 0, size.width * .73, size.height * .28);
 
 
 
-    path1.lineTo(size.width * .76, size.height * .45);
+    path1.lineTo(size.width * .73, size.height * .45);
     path1.quadraticBezierTo(
-        size.width * .76, size.height * .7, size.width * .83, size.height * .7);
+        size.width * .73, size.height * .75, size.width * .78, size.height * .75);
 
 
 
-    path1.lineTo(size.width * .9, size.height * .7);
-    path1.quadraticBezierTo(size.width * .95, size.height * .7,
-        size.width * .95, size.height * .87);
+    path1.lineTo(size.width * .9, size.height * .75);
+    path1.quadraticBezierTo(size.width * .95, size.height * .75,
+        size.width * .95, size.height * .92);
 
 
     path1.lineTo(size.width * .95, size.height);
@@ -43,7 +43,6 @@ class ShapeNavigator extends CustomPainter {
     path1.lineTo(size.width * .05, size.height);
     path1.close();
     canvas.drawPath(path1, paint);
-    canvas.clipRect(Rect.fromCircle(center: Offset(0, 0), radius: 16));
   }
 
   @override

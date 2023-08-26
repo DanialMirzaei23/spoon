@@ -10,10 +10,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MediaScaffold.homeScaffold(context: context,
-        titleAppBar: "da",// <------ No l10n file
-        reActionIconAppBar: (){},
-      child:[
+    return [
         toSpaceVertical(context: context,size: .01),
         SizedBox(
           child: Row(
@@ -59,7 +56,6 @@ class HomeScreen extends StatelessWidget {
         ),// <------ No l10n file
         toSpaceVertical(context: context,size: .01),
         BoxArrival() // <------ No l10n file
-      ].toItem.toSpace(context: context,left: .05,right: .05),
-    );
+      ].toItem.toSpace(context: context,left: .05,right: .05);
   }
 }

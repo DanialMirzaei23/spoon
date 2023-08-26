@@ -23,3 +23,6 @@ export 'search.dart';
 export 'box_home.dart';
 export 'box_arrival.dart';
 export 'floatingAction.dart';
+export 'shapenavigator.dart';
+export 'streamScreen.dart';
+export 'generate_tile.dart';

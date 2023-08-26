@@ -47,7 +47,6 @@ class TextFieldGenerated extends StatelessWidget {
             } else {
               return null;
             }
-            return null;
           }
 
           return Column(

@@ -11,3 +11,4 @@ export 'media_scaffold.dart';
 export 'controller.dart';
 export 'validateRegExp.dart';
 export 'generateDataIconNavigationBar.dart';
+export 'generateDataListDrawer.dart';

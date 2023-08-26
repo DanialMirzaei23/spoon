@@ -1,5 +1,4 @@
 import 'package:spoon/application/presentation/modules/extension/exp_main_router.dart';
-import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
 
 import '../../../../../packages/package.dart';
 

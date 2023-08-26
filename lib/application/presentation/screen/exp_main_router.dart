@@ -2,6 +2,17 @@
 
 // Screen HOME
 export '../screen/home/home_screen.dart';
+
+// Screen MENU
+export '../screen/home/features/menuScreen/menuScreen.dart';
+
+// Screen FAVORITE
+export '../screen/home/features/favoriteScreen/favoriteScreen.dart';
+
+// Screen SHOP
+export '../screen/home/features/shopScreen/shopScreen.dart';
+
+
 // Bloc HOME
 export '../screen/home/logic/exp_main_router.dart';
 

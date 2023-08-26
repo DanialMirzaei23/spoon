@@ -28,7 +28,7 @@ extension GenerateSizeOf on Widget{
     height: MediaQuery.sizeOf(context).height * size,
   );
    Widget toSpaceAll({required BuildContext context,double value=0})=>
-       Padding(child: this,padding: EdgeInsets.all(context.mediaQueryWidth(context)*value));
+       Padding(padding: EdgeInsets.all(context.mediaQueryWidth(context)*value), child: this);
 }
 
 extension GenerateMedia on BuildContext{
