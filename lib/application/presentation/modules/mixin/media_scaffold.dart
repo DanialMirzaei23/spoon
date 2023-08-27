@@ -1,7 +1,6 @@
 import 'package:spoon/application/presentation/modules/extension/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/widget/exp_main_router.dart';
-import 'package:spoon/application/presentation/modules/widget/shapenavigator.dart';
 import '../../../packages/package.dart';
 
 mixin MediaScaffold {
@@ -127,107 +126,17 @@ mixin MediaScaffold {
 
   static Widget homeScaffold({
     required BuildContext context,
-    required String titleAppBar,
-    required void Function() reActionIconAppBar,
-    required Widget child,
+    required PreferredSizeWidget appBar,
+    required Widget bottomNavigationBar,
+    required Widget body,drawer,
   }) =>
       Scaffold(
+        drawer: drawer ,
         backgroundColor: context.toTheme.colorScheme.background,
         extendBody: true,
-        appBar: AppBar(
-          elevation: 0.0,
-          surfaceTintColor: context.toTheme.colorScheme.background,
-          shadowColor: context.toTheme.colorScheme.background,
-          leading: Container(
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-                color: context.toTheme.colorScheme.onPrimary,
-                borderRadius: BorderRadius.circular(15)),
-            child: SvgGenerated(
-                generate: Generate.asset,
-                router: GenerateDataImages.icon_profile,
-                width: context.mediaQueryWidth(context) * .03,
-                height: context.mediaQueryHeight(context) * .03),
-          ).generateButton(onTap: reActionIconAppBar).toSpace(
-              context: context, top: .01, bottom: .01, left: .03, right: .01),
-          actions: [
-            Container(
-              height: 50,
-              width: 40,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: context.toTheme.colorScheme.onPrimary,
-                  borderRadius: BorderRadius.circular(15)),
-              child: SvgGenerated(
-                  generate: Generate.asset,
-                  router: GenerateDataImages.icon_setting,
-                  width: context.mediaQueryWidth(context) * .03,
-                  height: context.mediaQueryHeight(context) * .03),
-            ).generateButton(onTap: reActionIconAppBar).toSpace(
-                context: context, top: .01, bottom: .01, left: .03, right: .03)
-          ],
-          backgroundColor: context.toTheme.colorScheme.background,
-          title: titleAppBar.toText(
-              context: context,
-              color: context.toTheme.colorScheme.onBackground,
-              fontWeight: FontWeight.w600),
-          centerTitle: true,
-        ),
-        body: SingleChildScrollView(child: child),
-        bottomNavigationBar: Align(
-          child: Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              CustomPaint(isComplex: true,
-              painter: ShapeNavigator(),
-              child: Container(
-                height: context.mediaQueryHeight(context) * .12,
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(15),
-                      topLeft: Radius.circular(15),
-                    )),
-                child: ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return Align(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.values[5],
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            index == 3
-                                ? FloatingAction(
-                              onTap: () {},
-                              child: Icon(
-                                  GenerateNavigationBar.dataIcon[3]),
-                            )
-                                : Icon(GenerateNavigationBar.dataIcon[index]),
-                            // SizedBox(height: 10),
-                            GenerateNavigationBar.dataTextIcon[index]
-                                .toText(context: context),
-                          ],
-                        ),
-                      );
-                    },
-                    itemCount: GenerateNavigationBar.dataIcon.length,
-                    itemExtent: 95),
-              ).toSpace(context: context, right: .05, left: .05),
-            ),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: Container(
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: GenerateDataColors.white_neutral.toHex,width: 4),
-                      color: GenerateDataColors.orange_primary.toHex
-                  ),
-                  child: "0".toText(context: context).toSpaceAll(context: context,value: .02),
-                ).toSpace(context: context,bottom: .09),
-              ).toSpace(context: context,right: .05),
-            ] ,
-          ),
-        ),
+        appBar: appBar,
+        body: body,
+        bottomNavigationBar: bottomNavigationBar ,
       );
 }
 

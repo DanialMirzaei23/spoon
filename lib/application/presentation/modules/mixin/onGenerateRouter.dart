@@ -1,6 +1,8 @@
 mixin onGenerateRouters {
   static String onBoarding = "/onBoarding";
+  static String onStream = "/onStream";
   static String onHome = "/onHome";
+  static String onSetting = "/onSetting";
   static String onRegister = "/onRegister";
   static String onLogin = "/onLogin";
   static String onForgetPassword = "/onForgetPassword";

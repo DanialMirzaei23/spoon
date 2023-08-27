@@ -12,7 +12,7 @@ mixin GenerateNavigationBar{
     "Home",
     "Menu",
     "Favorites",
-    " "
+    ""
     // CupertinoIcons.shopping_cart,
   ];
 }

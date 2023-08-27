@@ -2,8 +2,8 @@
 
 
 //Bloc-home
-export '../logic/bloc/bloc.dart';
+export '../logic/bloc/navigatorBloc.dart';
 //Event-home
-export '../logic/event/eve_value.dart';
+export '../logic/event/eve_navigator.dart';
 //State-home
-export '../logic/state/ste_value.dart';
+export '../logic/state/ste_navigator.dart';
