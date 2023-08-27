@@ -13,6 +13,10 @@ export '../screen/home/features/favoriteScreen/favoriteScreen.dart';
 export '../screen/home/features/shopScreen/shopScreen.dart';
 
 
+// Screen SETTING
+export '../screen/home/features/setting/setting.dart';
+
+
 // Bloc HOME
 export '../screen/home/logic/exp_main_router.dart';
 

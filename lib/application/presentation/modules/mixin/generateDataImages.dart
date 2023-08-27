@@ -33,4 +33,13 @@ mixin GenerateDataImages on helpGenerated {
   static String image_box = "${helpGenerated.onHome}box.png";
   static String card = "${helpGenerated.onHome}card.png";
 
+  static String arrow_drawer = "${helpGenerated.onHome}arrow-drawer.svg";
+  static String card_drawer = "${helpGenerated.onHome}card-drawer.svg";
+  static String chat_drawer = "${helpGenerated.onHome}chat-drawer.svg";
+  static String info_drawer = "${helpGenerated.onHome}info-drawer.svg";
+  static String letter_drawer = "${helpGenerated.onHome}letter-drawer.svg";
+  static String logout_drawer = "${helpGenerated.onHome}logout-drawer.svg";
+  static String return_drawer = "${helpGenerated.onHome}return-drawer.svg";
+  static String wallet_drawer = "${helpGenerated.onHome}wallet-drawer.svg";
+
 }

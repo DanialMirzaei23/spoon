@@ -129,10 +129,8 @@ mixin MediaScaffold {
     required PreferredSizeWidget appBar,
     required Widget bottomNavigationBar,
     required Widget body,drawer,
-    required Key key,
   }) =>
       Scaffold(
-        key: key,
         drawer: drawer ,
         backgroundColor: context.toTheme.colorScheme.background,
         extendBody: true,

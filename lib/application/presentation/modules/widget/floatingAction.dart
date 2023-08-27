@@ -12,8 +12,8 @@ class FloatingAction extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       height: context.mediaQueryWidth(context)*.17,
-      width: context.mediaQueryWidth(context)*.19,
       decoration: BoxDecoration(
+
           boxShadow: const [
             BoxShadow(
               color: Colors.black26,
@@ -32,6 +32,6 @@ class FloatingAction extends StatelessWidget {
           child: child,
         ),
       ),
-    );
+    ).toSpace(context: context,left: .02);
   }
 }

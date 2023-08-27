@@ -16,7 +16,7 @@ class GenerateListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: SvgGenerated(generate: Generate.asset, router: image, width: context.mediaQueryWidth(context)*.02, height: context.mediaQueryHeight(context)*.02),
+      leading: SvgGenerated(generate: Generate.asset, router: image, width: context.mediaQueryWidth(context)*.025, height: context.mediaQueryHeight(context)*.025),
       // onTap: onTap,
       // subtitle: "sub".toText(context: context),
       title: title.toText(context: context,fontSize: GenerateStyleFont.body6,fontWeight: FontWeight.w800,color: GenerateDataColors.dark_neutral.toHex),
