@@ -113,7 +113,7 @@ mixin MediaScaffold {
                 width: context.mediaQueryWidth(context) * .03,
                 height: context.mediaQueryHeight(context) * .03),
           ).generateButton(onTap: reActionIconAppBar).toSpace(
-              context: context, top: .01, bottom: .01, left: .03, right: .01),
+              context: context, top: .01, bottom: .01, left: .04, right: .0),
           backgroundColor: context.toTheme.colorScheme.background,
           title: titleAppBar.toText(
               context: context,
@@ -121,7 +121,7 @@ mixin MediaScaffold {
               fontWeight: FontWeight.w600),
           centerTitle: true,
         ),
-        body: child,
+        body: child.toSpace(context: context,left: .04,right: .04),
       );
 
   static Widget homeScaffold({
@@ -135,7 +135,7 @@ mixin MediaScaffold {
         backgroundColor: context.toTheme.colorScheme.background,
         extendBody: true,
         appBar: appBar,
-        body: body,
+        body: body.toSpace(context: context,right: .04,left: .04),
         bottomNavigationBar: bottomNavigationBar ,
       );
 }

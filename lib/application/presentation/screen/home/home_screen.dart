@@ -56,6 +56,6 @@ class HomeScreen extends StatelessWidget {
         ),// <------ No l10n file
         toSpaceVertical(context: context,size: .01),
         BoxArrival() // <------ No l10n file
-      ].toItem.toSpace(context: context,left: .05,right: .05);
+      ].toItem;
   }
 }
