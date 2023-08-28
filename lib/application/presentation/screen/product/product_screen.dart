@@ -96,43 +96,46 @@ class ProductScreen extends StatelessWidget {
                         transformAlignment: Alignment.center,
                         width: context.mediaQueryWidth(context) * .15,
                         height: context.mediaQueryHeight(context) * .01,
-                        child: ListView.builder(
-                            physics: const NeverScrollableScrollPhysics(),
-                            scrollDirection: Axis.horizontal,
-                            itemBuilder: (context, index) {
-                              return index ==
-                                      LogicBloc.productAlbumCounterBloc.state
-                                          .albumCounter
-                                  ? Container(
-                                      width: 11,
-                                      height: 10,
-                                      decoration: BoxDecoration(
-                                          color: GenerateDataColors
-                                              .orange1_btn.toHex,
-                                          shape: BoxShape.rectangle,
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
-                                    )
-                                  : Container(
-                                      width: 6,
-                                      height: 6,
-                                      decoration: BoxDecoration(
-                                          color: GenerateDataColors
-                                              .wormy_primary.toHex,
-                                          shape: BoxShape.circle),
-                                    ).toSpace(
-                                      context: context,
-                                      left: .008,
-                                      right: .008);
-                            },
-                            itemCount: 3),
+                        child: ListView.separated(
+                          physics: const NeverScrollableScrollPhysics(),
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return index ==
+                                    LogicBloc.productAlbumCounterBloc.state
+                                        .albumCounter
+                                ? Container(
+                                    width: 11,
+                                    height: 10,
+                                    decoration: BoxDecoration(
+                                        color: GenerateDataColors
+                                            .orange1_btn.toHex,
+                                        shape: BoxShape.rectangle,
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
+                                  )
+                                : Container(
+                                    width: 6,
+                                    height: 6,
+                                    decoration: BoxDecoration(
+                                        color: GenerateDataColors
+                                            .wormy_primary.toHex,
+                                        shape: BoxShape.circle),
+                                  ).toSpace(
+                                    context: context, left: .008, right: .008);
+                          },
+                          itemCount: 3,
+                          separatorBuilder: (BuildContext context, int index) {
+                            return toSpaceLine(context: context, size: 0.01);
+                          },
+                        ),
                       ),
+                      toSpaceVertical(context: context, size: .01),
                       Container(
                         width: context.mediaQueryWidth(context),
                         // height: context.mediaQueryHeight(context) * .4,
                         decoration: BoxDecoration(
                           color: GenerateDataColors.white_neutral.toHex,
-                          borderRadius: BorderRadius.vertical(
+                          borderRadius: const BorderRadius.vertical(
                             top: Radius.circular(20),
                           ),
                         ),
@@ -141,10 +144,11 @@ class ProductScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              'Chequered overshirt'.toText(
-                                  context: context,
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: GenerateStyleFont.title2),
+                              Expanded(
+                                  child: 'Chequered overshirt'.toText(
+                                      context: context,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: GenerateStyleFont.title2)),
                               '\$30'.toText(
                                   context: context,
                                   fontSize: GenerateStyleFont.title3,
