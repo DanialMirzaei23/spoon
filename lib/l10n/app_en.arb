@@ -69,7 +69,13 @@
   "reviews" : "reviews",
   "description" : "Description",
   "read_more" : "Read more",
-  "add_to_cart" : "Add To Cart"
+  "add_to_cart" : "Add To Cart",
+  "cart" : "Cart",
+  "items" : "items",
+  "item_total" : "Item total",
+  "shipping_fee" : "Shipping fee",
+  "total" : "Total",
+  "go_to_checkout" : "Go To Checkout"
 
 
 }

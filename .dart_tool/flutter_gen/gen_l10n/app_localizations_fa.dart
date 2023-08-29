@@ -201,4 +201,22 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get add_to_cart => 'افزودن به سبد خرید';
+
+  @override
+  String get cart => 'ُسبد خرید';
+
+  @override
+  String get items => 'مورد';
+
+  @override
+  String get item_total => 'مبلغ محصولات';
+
+  @override
+  String get shipping_fee => 'هزینه پیک';
+
+  @override
+  String get total => 'جمع کل';
+
+  @override
+  String get go_to_checkout => 'صفحه پرداخت';
 }
