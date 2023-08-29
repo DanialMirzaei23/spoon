@@ -6,6 +6,7 @@ mixin helpGenerated {
   static String onOrders = "assets/icons/ordersScreen/";
   static String onHome = "assets/icons/homeScreen/";
   static String onSetting = "assets/icons/setting/";
+  static String onProduct = "assets/icons/productScreen/";
 }
 
 mixin GenerateDataImages on helpGenerated {
@@ -48,5 +49,9 @@ mixin GenerateDataImages on helpGenerated {
   static String contact_setting = "${helpGenerated.onSetting}contact.svg";
   static String info_setting = "${helpGenerated.onSetting}Information.svg";
   static String language_setting = "${helpGenerated.onSetting}language.svg";
+  //Product screen
+  static String product_model = "${helpGenerated.onProduct}Product-Model.png";
+  static String product_favorite = "${helpGenerated.onProduct}Heart.svg";
+  static String star = "${helpGenerated.onProduct}Star.svg";
 
 }

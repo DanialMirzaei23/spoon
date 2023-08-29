@@ -33,14 +33,14 @@ class OrdersScreen extends StatelessWidget {
             ),
             SizedBox(
               width: context.mediaQueryWidth(context),
-              height: context.mediaQueryHeight(context) * .07,
+              height: context.mediaQueryHeight(context) * .085,
               child: GradientButton(
                 onPressed: () {},
                 title: context.toAppLocalization.back_to_home,
-              ),
-            ).toSpace(context: context, right: .04, left: .04),
+              ).toSpace(context: context, bottom: .02),
+            ),
           ],
-        ).toSpace(context: context, top: .02, bottom: .02),
+        ),
       ),
     );
   }

@@ -77,7 +77,7 @@ class LoginScreen extends StatelessWidget {
             ).toSpace(context: context, top: .02, bottom: .03),
           ),
         ],
-      ).toSpace(context: context, left: .08, right: .08),
+      ),
     );
   }
 }

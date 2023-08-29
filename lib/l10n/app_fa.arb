@@ -66,6 +66,17 @@
   "track_order" : "پیگیری سفارش",
   "beautiful_clothes" : "لباس های زیبا",
   "the_joy_of_premium_fashion" : "لذت مد ممتاز",
-  "buy_now" : "الان بخر"
+  "buy_now" : "الان بخر",
+  "reviews" : "نظر",
+  "description" : "توضیحات",
+  "read_more" : "بیشتر",
+  "add_to_cart" : "افزودن به سبد خرید",
+  "cart" : "ُسبد خرید",
+  "items" : "مورد",
+  "item_total" : "مبلغ محصولات",
+  "shipping_fee" : "هزینه پیک",
+  "total" : "جمع کل",
+  "go_to_checkout" : "صفحه پرداخت"
+
   
 }

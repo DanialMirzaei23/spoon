@@ -38,6 +38,7 @@ class OrderStatusStepGenerated extends StatelessWidget {
         //         ? .037
         //         : .05),
         Column(
+          mainAxisSize: MainAxisSize.max,
           children: [
             Container(
               padding: orderStatusStep == GeneratedOrderStatusStep.processing
@@ -65,7 +66,7 @@ class OrderStatusStepGenerated extends StatelessWidget {
             ),
             Container(
               width: 2,
-              height: isLastStep ? 0 : 82,
+              height: isLastStep ? 0 : 95,
               decoration: BoxDecoration(
                   color: orderStatusStep == GeneratedOrderStatusStep.done
                       ? GenerateDataColors.orange1_btn.toHex
@@ -74,23 +75,25 @@ class OrderStatusStepGenerated extends StatelessWidget {
           ],
         ),
         toSpaceLine(context: context),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            title.toText(
-              context: context,
-              fontWeight: FontWeight.w500,
-              fontSize: GenerateStyleFont.headline1,
-              color: GenerateDataColors.dark_neutral.toHex,
-            ),
-            toSpaceVertical(context: context, size: .005),
-            description.toText(
-              context: context,
-              fontWeight: FontWeight.w500,
-              color: GenerateDataColors.grey_neutral.toHex,
-              fontSize: GenerateStyleFont.body6,
-            ),
-          ],
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              title.toText(
+                context: context,
+                fontWeight: FontWeight.w500,
+                fontSize: GenerateStyleFont.headline1,
+                color: GenerateDataColors.dark_neutral.toHex,
+              ),
+              toSpaceVertical(context: context, size: .005),
+              description.toText(
+                context: context,
+                fontWeight: FontWeight.w500,
+                color: GenerateDataColors.grey_neutral.toHex,
+                fontSize: GenerateStyleFont.body6,
+              ),
+            ],
+          ),
         ),
       ],
     );

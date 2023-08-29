@@ -14,13 +14,13 @@ class StartUp extends StatelessWidget {
       locale: Locale(GenerateCountry.en),
 
       // Initial Router
-      initialRoute: onGenerateRouters.onSetting,
+      initialRoute: onGenerateRouters.onBoarding,
 
       // Data Router
       routes: {
         onGenerateRouters.onBoarding: (_) => const OnBoarding(),
-        onGenerateRouters.onStream: (_) =>  StreamScreen(),
-        onGenerateRouters.onSetting: (_) =>  const Setting(),
+        onGenerateRouters.onStream: (_) => const StreamScreen(),
+        onGenerateRouters.onSetting: (_) => const Setting(),
         onGenerateRouters.onHome: (_) => const HomeScreen(),
         onGenerateRouters.onLogin: (_) => const LoginScreen(),
         onGenerateRouters.onRegister: (_) => const RegisterScreen(),
@@ -28,6 +28,8 @@ class StartUp extends StatelessWidget {
         onGenerateRouters.onVerifyAccount: (_) => const VerifyAccount(),
         onGenerateRouters.onOrders: (_) => const OrdersScreen(),
         onGenerateRouters.onOrderStatus: (_) => const OrderStatusScreen(),
+        onGenerateRouters.onProduct: (_) => const ProductScreen(),
+        onGenerateRouters.onCart: (_) => const CartScreen(),
       },
       // Theme Default Mode
       theme: lightTheme.copyWith(

@@ -6,7 +6,7 @@ import 'package:spoon/application/presentation/screen/exp_main_router.dart';
 import '../../../packages/package.dart';
 
 class StreamScreen extends StatelessWidget {
-   StreamScreen({super.key});
+   const StreamScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

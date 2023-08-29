@@ -68,9 +68,17 @@
   "track_order" : "Track order",
   "beautiful_clothes" : "Beautiful Clothes",
   "the_joy_of_premium_fashion" : "The joy of premium fashion",
-  "buy_now" : "Buy Now"
-
-
+  "buy_now" : "Buy Now",
+  "reviews" : "reviews",
+  "description" : "Description",
+  "read_more" : "Read more",
+  "add_to_cart" : "Add To Cart",
+  "cart" : "Cart",
+  "items" : "items",
+  "item_total" : "Item total",
+  "shipping_fee" : "Shipping fee",
+  "total" : "Total",
+  "go_to_checkout" : "Go To Checkout"
 
 
 }

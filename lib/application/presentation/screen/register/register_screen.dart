@@ -71,12 +71,13 @@ class RegisterScreen extends StatelessWidget {
                   titleColor: context.toTheme.colorScheme.onPrimary,
                 ).toSpace(context: context, top: .04),
                 toSpaceVertical(context: context, size: .01),
-                Row(mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center ,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SpanGenerated(
                       text_one: context
-                      .toAppLocalization.by_signing_up_agree_to_these,
+                          .toAppLocalization.by_signing_up_agree_to_these,
                       text_tow: context.toAppLocalization.conditions,
                       description: "",
                       fontSize: GenerateStyleFont.caption,
@@ -84,8 +85,7 @@ class RegisterScreen extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     ),
                     SpanGenerated(
-                      text_one: context
-                          .toAppLocalization.and,
+                      text_one: context.toAppLocalization.and,
                       text_tow: context.toAppLocalization.terms_of_use,
                       description: "",
                       fontSize: GenerateStyleFont.caption,
@@ -95,7 +95,7 @@ class RegisterScreen extends StatelessWidget {
                   ],
                 )
               ],
-            ).toSpace(context: context, right: .08, left: .08),
+            ),
           ),
         ),
         titleAppBar: context.toAppLocalization.register,

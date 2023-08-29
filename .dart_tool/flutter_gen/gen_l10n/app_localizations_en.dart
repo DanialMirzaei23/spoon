@@ -198,4 +198,34 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get buy_now => 'Buy Now';
+
+  @override
+  String get reviews => 'reviews';
+
+  @override
+  String get description => 'Description';
+
+  @override
+  String get read_more => 'Read more';
+
+  @override
+  String get add_to_cart => 'Add To Cart';
+
+  @override
+  String get cart => 'Cart';
+
+  @override
+  String get items => 'items';
+
+  @override
+  String get item_total => 'Item total';
+
+  @override
+  String get shipping_fee => 'Shipping fee';
+
+  @override
+  String get total => 'Total';
+
+  @override
+  String get go_to_checkout => 'Go To Checkout';
 }

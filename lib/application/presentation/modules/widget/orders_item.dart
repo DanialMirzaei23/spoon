@@ -17,42 +17,54 @@ class OrdersItemGenerated extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              '${context.toAppLocalization.order_id} : 5t38-83jd'.toText(
-                  context: context,
-                  fontWeight: FontWeight.w500,
-                  color: GenerateDataColors.grey_neutral.toHex),
-              '3 ${context.toAppLocalization.products}'.toText(
-                  context: context,
-                  fontWeight: FontWeight.w500,
-                  color: GenerateDataColors.grey_neutral.toHex),
+              Expanded(
+                child: '${context.toAppLocalization.order_id} : 5t38-83jd'
+                    .toText(
+                        context: context,
+                        fontWeight: FontWeight.w500,
+                        color: GenerateDataColors.grey_neutral.toHex),
+              ),
+              Expanded(
+                flex: 0,
+                child: '3 ${context.toAppLocalization.products}'.toText(
+                    context: context,
+                    fontWeight: FontWeight.w500,
+                    color: GenerateDataColors.grey_neutral.toHex),
+              ),
             ],
           ),
           toSpaceVertical(context: context, size: .015),
-          SizedBox(
-            height: context.mediaQueryHeight(context) * .3,
-            child: ListView.builder(
-              itemCount: 3,
-              itemBuilder: (context, index) {
-                return Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                        color: GenerateDataColors.grey1_neutral.toHex),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 70,
-                        height: 70,
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(16),
-                              bottomLeft: Radius.circular(16)),
-                          color: GenerateDataColors.grey1_neutral.toHex,
-                        ),
-                        child: Icon(Icons.shopping_cart),
+          ListView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: 3,
+            itemBuilder: (context, index) {
+              return Container(
+                decoration: BoxDecoration(
+                  border:
+                      Border.all(color: GenerateDataColors.grey1_neutral.toHex),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                            width: 3,
+                            color: GenerateDataColors.white_neutral.toHex),
+                        borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            bottomLeft: Radius.circular(16)),
+                        color: GenerateDataColors.grey1_neutral.toHex,
                       ),
-                      Column(
+                      child: SvgGenerated(
+                          generate: Generate.asset,
+                          router: GenerateDataImages.wallet_drawer,
+                          width: context.mediaQueryWidth(context) * .15,
+                          height: context.mediaQueryWidth(context) * .15),
+                    ),
+                    Expanded(
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           'Chequered overshirt'.toText(
@@ -62,36 +74,54 @@ class OrdersItemGenerated extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              '${context.toAppLocalization.size}: s, ${context.toAppLocalization.color}: '
-                                  .toText(
-                                      context: context,
-                                      fontSize: GenerateStyleFont.caption,
-                                      color: GenerateDataColors
-                                          .grey_neutral.toHex),
-                              Container(
-                                width: 12,
-                                height: 12,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color:
-                                      GenerateDataColors.orange_primary.toHex,
+                              Expanded(
+                                flex: 2,
+                                child: '${context.toAppLocalization.size}: s'
+                                    .toText(
+                                        context: context,
+                                        fontSize: GenerateStyleFont.caption,
+                                        color: GenerateDataColors
+                                            .grey_neutral.toHex),
+                              ),
+                              Expanded(
+                                flex: 0,
+                                child: '${context.toAppLocalization.color}: '
+                                    .toText(
+                                        context: context,
+                                        fontSize: GenerateStyleFont.caption,
+                                        color: GenerateDataColors
+                                            .grey_neutral.toHex),
+                              ),
+                              Expanded(
+                                flex: 0,
+                                child: Container(
+                                  width: 12,
+                                  height: 12,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color:
+                                        GenerateDataColors.orange_primary.toHex,
+                                  ),
                                 ),
                               ),
-                              ', ${context.toAppLocalization.quantity}: 1'
-                                  .toText(
-                                      context: context,
-                                      fontSize: GenerateStyleFont.caption,
-                                      color: GenerateDataColors
-                                          .grey_neutral.toHex),
                             ],
-                          )
+                          ),
+                          Align(
+                            alignment: Alignment.center,
+                            child: '${context.toAppLocalization.quantity}: 1'
+                                .toText(
+                                    context: context,
+                                    fontSize: GenerateStyleFont.caption,
+                                    color:
+                                        GenerateDataColors.grey_neutral.toHex),
+                          ),
                         ],
-                      ).toSpace(context: context, left: .05, right: .05)
-                    ],
-                  ),
-                ).toSpace(context: context, bottom: .008);
-              },
-            ),
+                      ).toSpace(context: context, left: .05, right: .05),
+                    )
+                  ],
+                ),
+              ).toSpace(context: context, bottom: .008);
+            },
           ),
           Divider(
             color: GenerateDataColors.grey1_neutral.toHex,
@@ -101,6 +131,6 @@ class OrdersItemGenerated extends StatelessWidget {
               onPressed: () {}, orderStatusButton: orderStatus),
         ],
       ).toSpace(context: context, top: .03, bottom: .03, right: .05, left: .05),
-    ).toSpace(context: context, bottom: 0.02, right: .04, left: .04);
+    ).toSpace(context: context, right: .04, left: .04, bottom: .03);
   }
 }
