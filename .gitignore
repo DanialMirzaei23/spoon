@@ -2,6 +2,9 @@
 .gradle/
 build/
 
+# Dart tool
+.dart_tool/
+
 # Local configuration file (sdk path, etc)
 local.properties
 
