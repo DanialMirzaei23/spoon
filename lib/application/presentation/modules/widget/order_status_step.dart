@@ -18,84 +18,87 @@ class OrderStatusStepGenerated extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(
-          width: context.mediaQueryWidth(context) *
-              (orderStatusStep == GeneratedOrderStatusStep.processing
-                  ? .137
-                  : .15),
-          child: date.toText(
-              context: context,
-              fontWeight: FontWeight.w500,
-              fontSize: GenerateStyleFont.caption,
-              color: GenerateDataColors.grey_neutral.toHex),
-        ),
-        // toSpaceLine(
-        //     context: context,
-        //     size: orderStatusStep == GeneratedOrderStatusStep.processing
-        //         ? .037
-        //         : .05),
-        Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Container(
-              padding: orderStatusStep == GeneratedOrderStatusStep.processing
-                  ? const EdgeInsets.all(4)
-                  : EdgeInsets.zero,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                    color: GenerateDataColors.orange1_btn.toHex,
-                    width:
-                        orderStatusStep == GeneratedOrderStatusStep.processing
-                            ? 1
-                            : 0),
-              ),
-              child: Container(
-                width: 16,
-                height: 16,
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: context.mediaQueryWidth(context) *
+                (orderStatusStep == GeneratedOrderStatusStep.processing
+                    ? .137
+                    : .15),
+            child: date.toText(
+                context: context,
+                fontWeight: FontWeight.w500,
+                fontSize: GenerateStyleFont.caption,
+                color: GenerateDataColors.grey_neutral.toHex),
+          ),
+          // toSpaceLine(
+          //     context: context,
+          //     size: orderStatusStep == GeneratedOrderStatusStep.processing
+          //         ? .037
+          //         : .05),
+          Column(
+            children: [
+              Container(
+                padding: orderStatusStep == GeneratedOrderStatusStep.processing
+                    ? const EdgeInsets.all(4)
+                    : EdgeInsets.zero,
                 decoration: BoxDecoration(
-                  color: orderStatusStep == GeneratedOrderStatusStep.notActive
-                      ? GenerateDataColors.grey_neutral.toHex
-                      : GenerateDataColors.orange1_btn.toHex,
                   shape: BoxShape.circle,
+                  border: Border.all(
+                      color: GenerateDataColors.orange1_btn.toHex,
+                      width:
+                          orderStatusStep == GeneratedOrderStatusStep.processing
+                              ? 1
+                              : 0),
+                ),
+                child: Container(
+                  width: 16,
+                  height: 16,
+                  decoration: BoxDecoration(
+                    color: orderStatusStep == GeneratedOrderStatusStep.notActive
+                        ? GenerateDataColors.grey_neutral.toHex
+                        : GenerateDataColors.orange1_btn.toHex,
+                    shape: BoxShape.circle,
+                  ),
                 ),
               ),
-            ),
-            Container(
-              width: 2,
-              height: isLastStep ? 0 : 95,
-              decoration: BoxDecoration(
-                  color: orderStatusStep == GeneratedOrderStatusStep.done
-                      ? GenerateDataColors.orange1_btn.toHex
-                      : GenerateDataColors.grey_neutral.toHex),
-            ),
-          ],
-        ),
-        toSpaceLine(context: context),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              title.toText(
-                context: context,
-                fontWeight: FontWeight.w500,
-                fontSize: GenerateStyleFont.headline1,
-                color: GenerateDataColors.dark_neutral.toHex,
-              ),
-              toSpaceVertical(context: context, size: .005),
-              description.toText(
-                context: context,
-                fontWeight: FontWeight.w500,
-                color: GenerateDataColors.grey_neutral.toHex,
-                fontSize: GenerateStyleFont.body6,
+              Flexible(
+                child: Container(
+                  width: 2,
+                  height: isLastStep ? 0 : null,
+                  decoration: BoxDecoration(
+                      color: orderStatusStep == GeneratedOrderStatusStep.done
+                          ? GenerateDataColors.orange1_btn.toHex
+                          : GenerateDataColors.grey_neutral.toHex),
+                ),
               ),
             ],
           ),
-        ),
-      ],
+          toSpaceLine(context: context),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                title.toText(
+                  context: context,
+                  fontWeight: FontWeight.w500,
+                  fontSize: GenerateStyleFont.headline1,
+                  color: GenerateDataColors.dark_neutral.toHex,
+                ),
+                toSpaceVertical(context: context, size: .005),
+                description.toText(
+                  context: context,
+                  fontWeight: FontWeight.w500,
+                  color: GenerateDataColors.grey_neutral.toHex,
+                  fontSize: GenerateStyleFont.body6,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
