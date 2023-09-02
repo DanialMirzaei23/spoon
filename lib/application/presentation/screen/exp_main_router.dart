@@ -64,3 +64,7 @@ export './product/logic/exp_mian_router.dart';
 
 // Screen Cart
 export './cart/cart_screen.dart';
+
+
+// Screen Search
+export './search/search_screen.dart';

@@ -78,7 +78,10 @@
   "item_total" : "Item total",
   "shipping_fee" : "Shipping fee",
   "total" : "Total",
-  "go_to_checkout" : "Go To Checkout"
+  "go_to_checkout" : "Go To Checkout",
+  "result_for" : "Result for",
+  "items_found" : "items found",
+  "no_result_found" : "No result found!"
 
 
 }

@@ -76,7 +76,10 @@
   "item_total" : "مبلغ محصولات",
   "shipping_fee" : "هزینه پیک",
   "total" : "جمع کل",
-  "go_to_checkout" : "صفحه پرداخت"
+  "go_to_checkout" : "صفحه پرداخت",
+  "result_for" : "جتسجو برای",
+  "items_found" : "مورد پیدا شد",
+  "no_result_found" : "موردی پیدا نشد"
 
   
 }

@@ -14,7 +14,7 @@ class StartUp extends StatelessWidget {
       locale: Locale(GenerateCountry.en),
 
       // Initial Router
-      initialRoute: onGenerateRouters.onOrderStatus,
+      initialRoute: onGenerateRouters.onSearch,
 
       // Data Router
       routes: {
@@ -30,6 +30,8 @@ class StartUp extends StatelessWidget {
         onGenerateRouters.onOrderStatus: (_) => const OrderStatusScreen(),
         onGenerateRouters.onProduct: (_) => const ProductScreen(),
         onGenerateRouters.onCart: (_) => const CartScreen(),
+        onGenerateRouters.onSearch: (_) => const SearchScreen(),
+
       },
       // Theme Default Mode
       theme: lightTheme.copyWith(
