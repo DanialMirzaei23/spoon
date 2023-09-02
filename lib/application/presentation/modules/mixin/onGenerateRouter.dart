@@ -8,6 +8,7 @@ mixin onGenerateRouters {
   static String onLogin = "/onLogin";
   static String onForgetPassword = "/onForgetPassword";
   static String onVerifyAccount = "/onVerifyAccount";
+  static String onCheckOut = "/onCheckOut";
   static String onOrders = "/onOrders";
   static String onOrderStatus = "/onOrderStatus";
   static String onProduct = "/onProduct";

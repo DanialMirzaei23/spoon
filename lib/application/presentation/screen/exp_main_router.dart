@@ -52,6 +52,12 @@ export '../screen/orders/orders_screen.dart';
 export '../screen/orders/logic/exp_main_router.dart';
 
 
+// Screen CHECKOUT
+export '../screen/checkout/checkout_screen.dart';
+// Bloc CHECKOUT
+export '../screen/checkout/logic/exp_main_router.dart';
+
+
 // Screen ORDER-STATUS
 export '../screen/orders/order_status/order_status_screen.dart';
 

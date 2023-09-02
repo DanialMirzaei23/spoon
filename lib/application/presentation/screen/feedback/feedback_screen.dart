@@ -80,7 +80,7 @@ class FeedBackScreen extends StatelessWidget {
               alignment: Alignment.center,
               child: Column(
                 children: [
-                  SizedBox(width: context.mediaQueryWidth(context),height: context.mediaQueryHeight(context)*.23,child:  TextFieldGenerateComment()),
+                  SizedBox(width: context.mediaQueryWidth(context),height: context.mediaQueryHeight(context)*.23,child: const TextFieldGenerateComment()),
                   SizedBox(
                     width: context.mediaQueryWidth(context),
                     child: "Your feedback will be anonymous".toText(context: context),
