@@ -82,7 +82,7 @@ mixin MediaScaffold {
                           left: alignLogo == Alignment.topLeft ? .08 : 0),
                       child,
                     ],
-                  )),
+                  ).toSpace(context: context,left: .04,right: .04)),
                 ),
               ),
             ),
@@ -94,7 +94,8 @@ mixin MediaScaffold {
     required BuildContext context,
     required Widget child,
     required String titleAppBar,
-    required void Function() reActionIconAppBar,
+    required void Function() reActionIconAppBar,onTapActionIcon,
+    bool isIco = false
   }) =>
       Scaffold(
         backgroundColor: context.toTheme.colorScheme.background,
@@ -114,6 +115,15 @@ mixin MediaScaffold {
                 height: context.mediaQueryHeight(context) * .03),
           ).generateButton(onTap: reActionIconAppBar).toSpace(
               context: context, top: .01, bottom: .01, left: .04, right: .0),
+          actions: [
+            if(isIco)...{
+              SvgGenerated(
+                  generate: Generate.asset,
+                  router: GenerateDataImages.camera_feedback,
+                  width: context.mediaQueryWidth(context) * .03,
+                  height: context.mediaQueryHeight(context) * .04).generateButton(onTap: reActionIconAppBar).toSpace(context: context,right: .04),
+            }
+          ],
           backgroundColor: context.toTheme.colorScheme.background,
           title: titleAppBar.toText(
               context: context,

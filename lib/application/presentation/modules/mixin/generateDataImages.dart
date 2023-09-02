@@ -5,6 +5,7 @@ mixin helpGenerated {
   static String onboarding = "assets/icons/onboarding/";
   static String onOrders = "assets/icons/ordersScreen/";
   static String onHome = "assets/icons/homeScreen/";
+  static String onFeedBack = "assets/icons/feedback/";
   static String onSetting = "assets/icons/setting/";
   static String onProduct = "assets/icons/productScreen/";
 }
@@ -53,5 +54,13 @@ mixin GenerateDataImages on helpGenerated {
   static String product_model = "${helpGenerated.onProduct}Product-Model.png";
   static String product_favorite = "${helpGenerated.onProduct}Heart.svg";
   static String star = "${helpGenerated.onProduct}Star.svg";
+
+  // feedback
+  static String camera_feedback = "${helpGenerated.onFeedBack}Camera.svg";
+  static String like_feedback = "${helpGenerated.onFeedBack}Like.svg";
+  static String message_off_feedback = "${helpGenerated.onFeedBack}Message.svg";
+  static String message_on_feedback = "${helpGenerated.onFeedBack}Message-Send.svg";
+  static String star_off_feedback = "${helpGenerated.onFeedBack}Star-Off.svg";
+  static String star_on_feedback = "${helpGenerated.onFeedBack}Star-On.svg";
 
 }

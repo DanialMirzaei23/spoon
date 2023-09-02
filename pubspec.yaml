@@ -99,6 +99,7 @@ flutter:
     - assets/icons/onboarding/
     - assets/icons/ordersScreen/
     - assets/icons/homeScreen/
+    - assets/icons/feedback/
     - assets/icons/setting/
     - assets/icons/productScreen/
   #   - images/a_dot_ham.jpeg
