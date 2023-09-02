@@ -8,6 +8,7 @@ mixin helpGenerated {
   static String onSetting = "assets/icons/setting/";
   static String onProduct = "assets/icons/productScreen/";
   static String onSearch = "assets/icons/searchScreen/";
+  static String onCategoriesContent = "assets/icons/categoriesContentScreen/";
 }
 
 mixin GenerateDataImages on helpGenerated {
@@ -56,4 +57,7 @@ mixin GenerateDataImages on helpGenerated {
 
   //Search screen
   static String empty_search = "${helpGenerated.onSearch}EmptySearch.svg";
+
+  //CategoriesContent Screen
+  static String filter = "${helpGenerated.onCategoriesContent}Filter.svg";
 }

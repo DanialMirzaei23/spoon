@@ -47,7 +47,12 @@ class MenuScreen extends StatelessWidget {
                     ),
                   ),
                 ],
-              ));
+              )).generateButton(
+            onTap: () {
+              context.navigatorPush(
+                  onGenerated: onGenerateRouters.onCategoriesContent);
+            },
+          );
         },
       ),
     ).toSpace(context: context, top: .014);

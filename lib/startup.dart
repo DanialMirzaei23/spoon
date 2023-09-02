@@ -2,6 +2,7 @@ import 'package:spoon/application/packages/package.dart';
 import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/widget/exp_main_router.dart';
 import 'package:spoon/application/presentation/screen/exp_main_router.dart';
+import 'package:spoon/application/presentation/screen/home/features/categoriesScreen/categoriesContentScreen.dart';
 
 class StartUp extends StatelessWidget {
   const StartUp({super.key});
@@ -31,6 +32,7 @@ class StartUp extends StatelessWidget {
         onGenerateRouters.onProduct: (_) => const ProductScreen(),
         onGenerateRouters.onCart: (_) => const CartScreen(),
         onGenerateRouters.onSearch: (_) => const SearchScreen(),
+        onGenerateRouters.onCategoriesContent: (_) => const CategoriesContentScreen(),
 
       },
       // Theme Default Mode

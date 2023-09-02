@@ -120,23 +120,38 @@ mixin MediaScaffold {
               color: context.toTheme.colorScheme.onBackground,
               fontWeight: FontWeight.w600),
           centerTitle: true,
+          actions: [
+            Container(
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  color: context.toTheme.colorScheme.onPrimary,
+                  borderRadius: BorderRadius.circular(10)),
+              child: SvgGenerated(
+                      generate: Generate.asset,
+                      router: GenerateDataImages.filter,
+                      width: context.mediaQueryWidth(context) * .03,
+                      height: context.mediaQueryHeight(context) * .03)
+                  .toSpace(context: context, left: .01 , right: .01),
+            ).generateButton(onTap: reActionIconAppBar).toSpace(
+                context: context, top: .01, bottom: .01, left: .0, right: .04)
+          ],
         ),
-        body: child.toSpace(context: context,left: .04,right: .04),
+        body: child.toSpace(context: context, left: .04, right: .04),
       );
 
   static Widget homeScaffold({
     required BuildContext context,
     required PreferredSizeWidget appBar,
     required Widget bottomNavigationBar,
-    required Widget body,drawer,
+    required Widget body,
+    drawer,
   }) =>
       Scaffold(
-        drawer: drawer ,
+        drawer: drawer,
         backgroundColor: context.toTheme.colorScheme.background,
         extendBody: true,
         appBar: appBar,
-        body: body.toSpace(context: context,right: .04,left: .04),
-        bottomNavigationBar: bottomNavigationBar ,
+        body: body.toSpace(context: context, right: .04, left: .04),
+        bottomNavigationBar: bottomNavigationBar,
       );
 }
-
