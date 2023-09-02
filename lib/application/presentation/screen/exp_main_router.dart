@@ -4,7 +4,7 @@
 export '../screen/home/home_screen.dart';
 
 // Screen MENU
-export '../screen/home/features/menuScreen/menuScreen.dart';
+export 'home/features/categoriesScreen/categoriesScreen.dart';
 
 // Screen FAVORITE
 export '../screen/home/features/favoriteScreen/favoriteScreen.dart';

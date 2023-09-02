@@ -81,7 +81,11 @@
   "go_to_checkout" : "Go To Checkout",
   "result_for" : "Result for",
   "items_found" : "items found",
-  "no_result_found" : "No result found!"
+  "no_result_found" : "No result found!",
+  "categories" : "Categories",
+  "filter" : "Filter",
+  "characteristics" : "Characteristics",
+  "price" : "Price"
 
 
 }
