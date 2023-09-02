@@ -14,7 +14,7 @@ class StartUp extends StatelessWidget {
       locale: Locale(GenerateCountry.en),
 
       // Initial Router
-      initialRoute: onGenerateRouters.onOrderStatus,
+      initialRoute: onGenerateRouters.onFeedBack,
 
       // Data Router
       routes: {
@@ -22,6 +22,7 @@ class StartUp extends StatelessWidget {
         onGenerateRouters.onStream: (_) => const StreamScreen(),
         onGenerateRouters.onSetting: (_) => const Setting(),
         onGenerateRouters.onHome: (_) => const HomeScreen(),
+        onGenerateRouters.onFeedBack: (_) => const FeedBackScreen(),
         onGenerateRouters.onLogin: (_) => const LoginScreen(),
         onGenerateRouters.onRegister: (_) => const RegisterScreen(),
         onGenerateRouters.onForgetPassword: (_) => const ForgetPassword(),

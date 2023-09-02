@@ -12,7 +12,7 @@ class ForgetPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return MediaScaffold.nonScaffold(
       context: context,
-      reActionIconAppBar: () => print("object"),
+      reActionBackIconAppBar: () => print("object"),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

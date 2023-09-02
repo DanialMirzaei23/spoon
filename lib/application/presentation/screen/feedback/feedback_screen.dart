@@ -12,6 +12,7 @@ class FeedBackScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MediaScaffold.nonScaffold(
         context: context,
+        icon: GenerateDataImages.camera_feedback,
         child: SingleChildScrollView(
           child: <Widget>[
             // icons
@@ -101,7 +102,7 @@ class FeedBackScreen extends StatelessWidget {
             toSpaceVertical(context: context,size: .02),
           ].toItem,
         ),
-        reActionIconAppBar: () {},
+        reActionBackIconAppBar: () {},
         titleAppBar: "Give Feedback",
         isIco: false,
         onTapActionIcon: () {});

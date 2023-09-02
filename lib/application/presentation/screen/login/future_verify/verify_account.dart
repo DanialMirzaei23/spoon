@@ -12,7 +12,7 @@ class VerifyAccount extends StatelessWidget {
     return MediaScaffold.nonScaffold(
       context: context,
       // ignore: avoid_print
-      reActionIconAppBar: () => print("object"),
+      reActionBackIconAppBar: () => print("object"),
       child: SingleChildScrollView(
         child: Container(
           height: context.mediaQueryHeight(context) * .88,

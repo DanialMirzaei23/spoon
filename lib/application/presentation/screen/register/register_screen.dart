@@ -99,6 +99,6 @@ class RegisterScreen extends StatelessWidget {
           ),
         ),
         titleAppBar: context.toAppLocalization.register,
-        reActionIconAppBar: () {});
+        reActionBackIconAppBar: () {});
   }
 }

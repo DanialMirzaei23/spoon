@@ -93,8 +93,8 @@ mixin MediaScaffold {
   static Widget nonScaffold({
     required BuildContext context,
     required Widget child,
-    required String titleAppBar,
-    required void Function() reActionIconAppBar,onTapActionIcon,
+    required String titleAppBar,icon='',
+    required void Function() reActionBackIconAppBar,onTapActionIcon,
     bool isIco = false
   }) =>
       Scaffold(
@@ -113,15 +113,15 @@ mixin MediaScaffold {
                 router: GenerateDataImages.arrow_left,
                 width: context.mediaQueryWidth(context) * .03,
                 height: context.mediaQueryHeight(context) * .03),
-          ).generateButton(onTap: reActionIconAppBar).toSpace(
+          ).generateButton(onTap: reActionBackIconAppBar).toSpace(
               context: context, top: .01, bottom: .01, left: .04, right: .0),
           actions: [
-            if(isIco)...{
+            if(icon!='')...{
               SvgGenerated(
                   generate: Generate.asset,
-                  router: GenerateDataImages.camera_feedback,
+                  router: icon,
                   width: context.mediaQueryWidth(context) * .03,
-                  height: context.mediaQueryHeight(context) * .04).generateButton(onTap: reActionIconAppBar).toSpace(context: context,right: .04),
+                  height: context.mediaQueryHeight(context) * .04).generateButton(onTap: reActionBackIconAppBar).toSpace(context: context,right: .04),
             }
           ],
           backgroundColor: context.toTheme.colorScheme.background,

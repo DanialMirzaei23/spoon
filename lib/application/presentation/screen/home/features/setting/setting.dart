@@ -38,7 +38,7 @@ class Setting extends StatelessWidget {
           ],
         ),
         titleAppBar: "Setting",
-        reActionIconAppBar: () {
+        reActionBackIconAppBar: () {
           context.navigatorPush(onGenerated: onGenerateRouters.onStream);
         });
   }

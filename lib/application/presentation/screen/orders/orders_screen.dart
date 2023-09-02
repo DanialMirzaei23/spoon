@@ -11,7 +11,7 @@ class OrdersScreen extends StatelessWidget {
     return MediaScaffold.nonScaffold(
       context: context,
       titleAppBar: context.toAppLocalization.my_orders,
-      reActionIconAppBar: () => print('object'),
+      reActionBackIconAppBar: () => print('object'),
       child: SizedBox(
         width: context.mediaQueryWidth(context),
         child: Column(
