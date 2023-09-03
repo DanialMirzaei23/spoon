@@ -18,11 +18,11 @@ class Setting extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: [
                 toSpaceVertical(context: context,size: .015),
-                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.language_setting, title: "Language", icon:GenerateDataImages.arrow_drawer)),
+                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.language_setting, title: context.toAppLocalization.language, icon:GenerateDataImages.arrow_drawer)),
                 toSpaceVertical(context: context,size: .015),
-                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.contact_setting, title: "Contact", icon:GenerateDataImages.arrow_drawer)),
+                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.contact_setting, title: context.toAppLocalization.contact, icon:GenerateDataImages.arrow_drawer)),
                 toSpaceVertical(context: context,size: .015),
-                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.info_setting, title: "Change password", icon:GenerateDataImages.arrow_drawer)),
+                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.info_setting, title: context.toAppLocalization.change_password, icon:GenerateDataImages.arrow_drawer)),
               ].toItem,
             ),
             Align(
@@ -32,12 +32,12 @@ class Setting extends StatelessWidget {
                 height: context.mediaQueryHeight(context)*.07,
                 child: GradientButton(onPressed: (){
                   context.navigatorPush(onGenerated: onGenerateRouters.onStream);
-                }, title: "Back To Home"),
+                }, title: context.toAppLocalization.back_to_home),
               ),
             ).toSpace(context: context,bottom: .02),
           ],
         ),
-        titleAppBar: "Setting",
+        titleAppBar: context.toAppLocalization.setting,
         reActionBackIconAppBar: () {
           context.navigatorPush(onGenerated: onGenerateRouters.onStream);
         });

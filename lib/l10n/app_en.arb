@@ -1,12 +1,7 @@
 {
-
-
   "slider_one" : "Contains variety\nof",
-
   "slider_tow" : "Update the latest\n",
-
   "slider_tree" : "Many",
-
   "choices_s_one": "CHOICES",
   "trends_s_tow": "TRENDS",
   "vouchers": "VOUCHERS",
@@ -78,7 +73,31 @@
   "item_total" : "Item total",
   "shipping_fee" : "Shipping fee",
   "total" : "Total",
-  "go_to_checkout" : "Go To Checkout"
+  "go_to_checkout" : "Go To Checkout",
+  "new_arrival" : "New Arrival",
+  "see_all" : "see all",
+  "search" : "Search",
+  "basic_round_neck_oversize_sweatshirt" : "Basic round neck oversize sweatshirt",
+  "items" : "items",
+  "language" : "Language",
+  "contact" : "Contact",
+  "change_password" : "Change password",
+  "back_to_home" : "Back To Home",
+  "setting" : "Setting",
+  "theres_no_product_yet" : "There’s no product yet!",
+  "log_out" : "Log out",
+  "your_feedback_will_be_anonymous" : "Your feedback will be anonymous",
+  "send_review" : "Send review",
+  "give_feedback" : "Give Feedback",
+  "shipping_information" : "Shipping Information",
+  "payment_method" : "Payment Method",
+  "promo_code" : "Promo Code",
+  "edit" : "Edit",
+  "add" : "Add",
+  "voucher" : "Voucher",
+  "place_order" : "Place Order",
+  "free" : "Free"
+
 
 
 }

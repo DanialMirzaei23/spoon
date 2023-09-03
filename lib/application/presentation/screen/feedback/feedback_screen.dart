@@ -1,4 +1,4 @@
-import 'package:flutter/rendering.dart';
+
 import 'package:spoon/application/presentation/modules/extension/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/widget/exp_main_router.dart';
@@ -84,7 +84,7 @@ class FeedBackScreen extends StatelessWidget {
                   SizedBox(width: context.mediaQueryWidth(context),height: context.mediaQueryHeight(context)*.23,child: const TextFieldGenerateComment()),
                   SizedBox(
                     width: context.mediaQueryWidth(context),
-                    child: "Your feedback will be anonymous".toText(context: context),
+                    child: context.toAppLocalization.your_feedback_will_be_anonymous.toText(context: context),
                   )
                 ],
               ),
@@ -95,7 +95,7 @@ class FeedBackScreen extends StatelessWidget {
               child: ButtonCustomer(
                 onPressed: () {},
                 buttonColor: context.toTheme.disabledColor,
-                title: "send review",
+                title: context.toAppLocalization.send_review,
                 titleColor: context.toTheme.colorScheme.onPrimary,
               ),
             ),
@@ -103,7 +103,7 @@ class FeedBackScreen extends StatelessWidget {
           ].toItem,
         ),
         reActionBackIconAppBar: () {},
-        titleAppBar: "Give Feedback",
+        titleAppBar: context.toAppLocalization.give_feedback,
         isIco: false,
         onTapActionIcon: () {});
   }

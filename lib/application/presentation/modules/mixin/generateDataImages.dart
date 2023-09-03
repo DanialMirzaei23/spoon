@@ -5,6 +5,7 @@ mixin helpGenerated {
   static String onboarding = "assets/icons/onboarding/";
   static String onOrders = "assets/icons/ordersScreen/";
   static String onHome = "assets/icons/homeScreen/";
+  static String onCheckOut = "assets/icons/checkout/";
   static String onFeedBack = "assets/icons/feedback/";
   static String onSetting = "assets/icons/setting/";
   static String onProduct = "assets/icons/productScreen/";
@@ -62,5 +63,14 @@ mixin GenerateDataImages on helpGenerated {
   static String message_on_feedback = "${helpGenerated.onFeedBack}Message-Send.svg";
   static String star_off_feedback = "${helpGenerated.onFeedBack}Star-Off.svg";
   static String star_on_feedback = "${helpGenerated.onFeedBack}Star-On.svg";
+  
+  
+  // checkout
+  static String call_outline_checkout = "${helpGenerated.onCheckOut}Call-Outline.svg";
+  static String home_outline_checkout = "${helpGenerated.onCheckOut}Home-Outline.svg";
+  static String icon_user_checkout = "${helpGenerated.onCheckOut}Icon-User.svg";
+  static String location_checkout = "${helpGenerated.onCheckOut}Location.svg";
+  static String ticket_checkout = "${helpGenerated.onCheckOut}Ticket.svg";
+  static String wallet_colored_checkout = "${helpGenerated.onCheckOut}Wallet-Colored.svg";
 
 }

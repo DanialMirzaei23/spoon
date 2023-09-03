@@ -16,7 +16,7 @@ class GradientButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: context.mediaQueryWidth(context)*.3,
-      height: context.mediaQueryHeight(context)*.06,
+      height: context.mediaQueryHeight(context)*.07,
       decoration: BoxDecoration(
           boxShadow: const [
             BoxShadow(

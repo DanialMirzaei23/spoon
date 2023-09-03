@@ -19,7 +19,7 @@ class ShopScreen extends StatelessWidget {
               width: context.mediaQueryWidth(context) * .3,
               height: context.mediaQueryHeight(context) * .3),
           toSpaceVertical(context: context, size: .02),
-          "There’s no product yet! ".toText(
+          context.toAppLocalization.theres_no_product_yet.toText(
               context: context,
               color: GenerateDataColors.dark_neutral.toHex,
               fontWeight: FontWeight.bold,
