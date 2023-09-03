@@ -9,10 +9,10 @@ class SearchGenerate extends StatelessWidget {
     // required this.textEditingController,
     // required this.textInputType,
     // required this.textInputAction,
-    // required this.titleField
+    required this.titleField
    });
 
-  // final String  titleField;
+  final String  titleField;
   // final TextEditingController textEditingController;
   //
   // final TextInputType textInputType;
@@ -31,7 +31,7 @@ class SearchGenerate extends StatelessWidget {
         child: SearchBar(controller: controller,
         backgroundColor: MaterialStateProperty.all(GenerateDataColors.white_neutral.toHex),
           elevation: MaterialStateProperty.all(0.0),
-          hintText: "titleField",
+          hintText: titleField,
           leading: SvgGenerated(generate: Generate.asset,
           router: GenerateDataImages.icon_search,
           width: context.mediaQueryWidth(context) * .03,
@@ -47,7 +47,7 @@ class SearchGenerate extends StatelessWidget {
         // "danial4".toText(context: context),
       ] ;
     },isFullScreen: true,
-      viewHintText: "Search2...",
+      viewHintText: titleField,
       viewElevation: 0.0,
       // searchController: Controller.searchAnchor,
 

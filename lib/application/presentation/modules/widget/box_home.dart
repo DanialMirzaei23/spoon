@@ -42,7 +42,7 @@ class BoxHome extends StatelessWidget {
             toSpaceVertical(context: context, size: .03),
             Container(
               height: 40,
-              child: "Buy Now".toText(
+              child: context.toAppLocalization.buy_now.toText(
                   context: context,
                   color: GenerateDataColors.orange_primary.toHex,
                   fontWeight: FontWeight.w800),

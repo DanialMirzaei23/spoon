@@ -13,9 +13,7 @@ class CartScreen extends StatelessWidget {
     return MediaScaffold.nonScaffold(
         context: context,
         titleAppBar: context.toAppLocalization.cart,
-        reActionIconAppBar: () {
-          
-        },
+        reActionBackIconAppBar: () {},
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

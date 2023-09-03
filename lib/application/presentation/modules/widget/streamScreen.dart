@@ -59,7 +59,7 @@ class StreamScreen extends StatelessWidget {
                   Align(
                     child: GenerateListTile(
                         image: GenerateDataImages.logout_drawer,
-                        title: "Log out",
+                        title: context.toAppLocalization.log_out,
                         icon: GenerateDataImages.arrow_drawer),
                   )
                 ],
@@ -143,7 +143,6 @@ class StreamScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                  // width: context.mediaQueryWidth(context),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment:

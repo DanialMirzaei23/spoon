@@ -46,10 +46,22 @@ export '../screen/register/register_screen.dart';
 export '../screen/register/logic/exp_main_router.dart';
 
 
+// Screen FEEDBACK
+export '../screen/feedback/feedback_screen.dart';
+// Bloc FEEDBACK
+export '../screen/feedback/logic/exp_main_router.dart';
+
+
 // Screen ORDERS
 export '../screen/orders/orders_screen.dart';
 // Bloc Orders
 export '../screen/orders/logic/exp_main_router.dart';
+
+
+// Screen CHECKOUT
+export '../screen/checkout/checkout_screen.dart';
+// Bloc CHECKOUT
+export '../screen/checkout/logic/exp_main_router.dart';
 
 
 // Screen ORDER-STATUS

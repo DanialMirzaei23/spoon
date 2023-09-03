@@ -19,9 +19,6 @@ class SearchScreen extends StatelessWidget {
     return MediaScaffold.nonScaffold(
       context: context,
       titleAppBar: '${context.toAppLocalization.result_for}"test word"',
-      reActionIconAppBar: () {
-        
-      },
       child: Column(
         children: [
           Spacer(),
@@ -47,7 +44,7 @@ class SearchScreen extends StatelessWidget {
             ),
           ).toSpace(context: context, bottom: .02),
         ],
-      ),
+      ), reActionBackIconAppBar: () {  },
 
       // Column(
       //   crossAxisAlignment: CrossAxisAlignment.start,

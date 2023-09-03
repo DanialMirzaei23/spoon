@@ -13,9 +13,6 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MediaScaffold.nonScaffold(
         context: context,
-        reActionIconAppBar: () {
-          
-        },
         child: SingleChildScrollView(
           child: Container(
             height: context.mediaQueryHeight(context) * .9,
@@ -101,6 +98,7 @@ class RegisterScreen extends StatelessWidget {
             ),
           ),
         ),
-        titleAppBar: context.toAppLocalization.register,);
+        titleAppBar: context.toAppLocalization.register,
+        reActionBackIconAppBar: () {});
   }
 }

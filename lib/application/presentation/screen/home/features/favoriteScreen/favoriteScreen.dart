@@ -20,7 +20,7 @@ class FavoriteScreen extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.centerLeft,
-            child: "15 items"
+            child: "15 ${context.toAppLocalization.items}"
                 .toText(
                     context: context,
                     color: GenerateDataColors.grey_neutral.toHex,
@@ -29,14 +29,12 @@ class FavoriteScreen extends StatelessWidget {
           ),
           Align(
             child: Container(
-// height: context.mediaQueryHeight(context),
               width: context.mediaQueryWidth(context),
               decoration: BoxDecoration(
-// color: Colors.red,
                 borderRadius: BorderRadius.circular(15.0),
               ),
               child: GridView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: 15,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -46,7 +44,6 @@ class FavoriteScreen extends StatelessWidget {
                     mainAxisExtent: context.mediaQueryHeight(context) * .37,
                     mainAxisSpacing: 10),
                 itemBuilder: (context, index) => Container(
-// height: context.mediaQueryHeight(context) * .5,
                   decoration: BoxDecoration(
                       color: GenerateDataColors.white_neutral.toHex,
                       borderRadius: BorderRadius.circular(15)),
@@ -84,7 +81,7 @@ class FavoriteScreen extends StatelessWidget {
                       toSpaceVertical(context: context, size: .01),
                       Align(
                         alignment: Alignment.center,
-                        child: "Basic round neck oversize sweatshirt".toText(
+                        child: context.toAppLocalization.basic_round_neck_oversize_sweatshirt.toText(
                             context: context, fontWeight: FontWeight.w500),
                       ),
                       toSpaceVertical(context: context, size: .01),

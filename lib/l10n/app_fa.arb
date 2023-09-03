@@ -1,11 +1,8 @@
 {
   "register" : "ثبت نام",
   "slider_one" : "دارای تنوع\nاز",
-
   "slider_tow" : "به روز رسانی آخرین\n",
-
   "slider_tree" : "زیاد",
-
   "choices_s_one": "انتخاب ها",
   "trends_s_tow": "روندها",
   "vouchers": "کوپن",
@@ -83,7 +80,28 @@
   "categories" : "دسته بندی ها",
   "filter" : "فیلتر",
   "characteristics" : "ویژگی ها",
-  "price" : "قیمت"
-
-  
+  "price" : "قیمت",
+  "new_arrival" : "ورود جدید",
+  "see_all" : "بیشتر",
+  "search" : "جستجو",
+  "basic_round_neck_oversize_sweatshirt" : "سویشرت ساده یقه گرد",
+  "items" : "موارد",
+  "language" : "زبان",
+  "contact" : "مخاطب",
+  "change_password" : "تغییر رمز",
+  "back_to_home" : "بازگشت به خانه",
+  "setting" : "تنظیمات",
+  "log_out" : "خروج",
+  "send_review" : "ارسال بررسی",
+  "theres_no_product_yet" : "هنوز محصولی وجود ندارد!",
+  "your_feedback_will_be_anonymous" : "بازخورد شما ناشناس خواهد بود",
+  "give_feedback" : "بازخورد دادن",
+  "shipping_information" : "اطلاعات",
+  "payment_method" : "روش پرداخت",
+  "promo_code" : "کد تبلیغاتی",
+  "edit" : "ویرایش",
+  "add" : "اضافه",
+  "voucher" : "کوپن",
+  "place_order" : "سفارش دهید",
+  "free" : "رایگان"
 }

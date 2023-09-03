@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
         SizedBox(
           child: Row(
             children: [
-            Expanded(flex: 1,child: SearchGenerate(),),// <------ No l10n file
+            Expanded(flex: 1,child: SearchGenerate(titleField:context.toAppLocalization.search ),),// <------ No l10n file
             toSpaceLine(context: context,size: .02),
             Expanded(flex: 0,child:
             Container(
@@ -33,29 +33,29 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         toSpaceVertical(context: context,size: .02),
-        SizedBox(
-          child: BoxHome(), // <------ No l10n file
+        const SizedBox(
+          child: BoxHome(),
         ),
         toSpaceVertical(context: context,size: .015),
         SizedBox(
           child: Row(
 
             children: [
-              Expanded(child: Row(
+              Expanded(flex: 5, child: Row(
                 children: [
-                  'New Arrival'.toText(context: context,fontSize: GenerateStyleFont.title2,fontWeight: FontWeight.bold),
+                  context.toAppLocalization.new_arrival.toText(context: context,fontSize: GenerateStyleFont.title2,fontWeight: FontWeight.bold),
                   SvgGenerated(generate: Generate.asset, router: GenerateDataImages.fire_icon,
                     width:context.mediaQueryWidth(context)*.03 ,
                     height:context.mediaQueryHeight(context)*.03 ,
                   ).toSpace(context: context,left: .02,)
                 ],
-              ),flex: 5),
-              Expanded(child: 'see all'.toText(context: context,fontSize: GenerateStyleFont.body4,fontWeight: FontWeight.w700,color: GenerateDataColors.orange_primary.toHex),)
+              )),
+              Expanded(child: context.toAppLocalization.see_all.toText(context: context,fontSize: GenerateStyleFont.body4,fontWeight: FontWeight.w700,color: GenerateDataColors.orange_primary.toHex),)
             ],
           ),
         ),// <------ No l10n file
         toSpaceVertical(context: context,size: .01),
-        BoxArrival() // <------ No l10n file
+        const BoxArrival()
       ].toItem;
   }
 }

@@ -82,7 +82,7 @@ mixin MediaScaffold {
                           left: alignLogo == Alignment.topLeft ? .08 : 0),
                       child,
                     ],
-                  )),
+                  ).toSpace(context: context,left: .04,right: .04)),
                 ),
               ),
             ),
@@ -92,9 +92,10 @@ mixin MediaScaffold {
 
   static Widget nonScaffold({
     required BuildContext context,
-    required Widget child,
-    required String titleAppBar,
-    required void Function() reActionIconAppBar,
+    required Widget child ,iconButton,
+    required String titleAppBar,icon='',
+    required void Function() reActionBackIconAppBar,onTapActionIcon,
+    bool isIco = false
   }) =>
       Scaffold(
         backgroundColor: context.toTheme.colorScheme.background,
@@ -112,13 +113,33 @@ mixin MediaScaffold {
                 router: GenerateDataImages.arrow_left,
                 width: context.mediaQueryWidth(context) * .03,
                 height: context.mediaQueryHeight(context) * .03),
-          ).generateButton(onTap: reActionIconAppBar).toSpace(
+          ).generateButton(onTap: reActionBackIconAppBar).toSpace(
               context: context, top: .01, bottom: .01, left: .04, right: .0),
+          actions: [
+            if(icon!='')...{
+              SvgGenerated(
+                  generate: Generate.asset,
+                  router: icon,
+                  width: context.mediaQueryWidth(context) * .03,
+                  height: context.mediaQueryHeight(context) * .04).generateButton(onTap: onTapActionIcon).toSpace(context: context,right: .04),
+            },
+            if(isIco)...{
+            Container(
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+            color: context.toTheme.colorScheme.onPrimary,
+            borderRadius: BorderRadius.circular(10)),
+            child:iconButton
+            ).generateButton(onTap: onTapActionIcon).toSpace(
+                context: context, top: .01, bottom: .01, left: .0, right: .04),
+            }
+          ],
           backgroundColor: context.toTheme.colorScheme.background,
           title: titleAppBar.toText(
               context: context,
+              fontSize: GenerateStyleFont.headline1,
               color: context.toTheme.colorScheme.onBackground,
-              fontWeight: FontWeight.w600),
+              fontWeight: FontWeight.w800),
           centerTitle: true,
         ),
         body: child.toSpace(context: context, left: .04, right: .04),

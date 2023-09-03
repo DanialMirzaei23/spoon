@@ -28,3 +28,4 @@ export 'streamScreen.dart';
 export 'generate_tile.dart';
 export 'white_container.dart';
 export 'cart_item.dart';
+export 'textFieldGenerateComment.dart';

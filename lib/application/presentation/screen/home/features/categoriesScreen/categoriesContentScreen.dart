@@ -25,7 +25,7 @@ class CategoriesContentScreen extends StatelessWidget {
         return MediaScaffold.nonScaffold(
           context: context,
           titleAppBar: 'Tops',
-          reActionIconAppBar: () {
+          onTapActionIcon: () {
             showModalBottomSheet(
               context: context,
               builder: (context) {
@@ -303,7 +303,7 @@ class CategoriesContentScreen extends StatelessWidget {
                 ),
               ).toSpace(context: context, bottom: .0)),
             ],
-          ),
+          ), reActionBackIconAppBar: () {  },
         );
       },
     );
