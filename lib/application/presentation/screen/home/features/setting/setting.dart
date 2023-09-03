@@ -17,24 +17,39 @@ class Setting extends StatelessWidget {
             Align(
               alignment: Alignment.centerLeft,
               child: [
-                toSpaceVertical(context: context,size: .015),
-                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.language_setting, title: "Language", icon:GenerateDataImages.arrow_drawer)),
-                toSpaceVertical(context: context,size: .015),
-                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.contact_setting, title: "Contact", icon:GenerateDataImages.arrow_drawer)),
-                toSpaceVertical(context: context,size: .015),
-                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.info_setting, title: "Change password", icon:GenerateDataImages.arrow_drawer)),
+                toSpaceVertical(context: context, size: .015),
+                WhiteContainerGenerated(
+                    child: GenerateListTile(
+                        image: GenerateDataImages.language_setting,
+                        title: "Language",
+                        icon: GenerateDataImages.arrow_drawer)),
+                toSpaceVertical(context: context, size: .015),
+                WhiteContainerGenerated(
+                    child: GenerateListTile(
+                        image: GenerateDataImages.contact_setting,
+                        title: "Contact",
+                        icon: GenerateDataImages.arrow_drawer)),
+                toSpaceVertical(context: context, size: .015),
+                WhiteContainerGenerated(
+                    child: GenerateListTile(
+                        image: GenerateDataImages.info_setting,
+                        title: "Change password",
+                        icon: GenerateDataImages.arrow_drawer)),
               ].toItem,
             ),
             Align(
               alignment: Alignment.center,
               child: SizedBox(
                 width: context.mediaQueryWidth(context),
-                height: context.mediaQueryHeight(context)*.07,
-                child: GradientButton(onPressed: (){
-                  context.navigatorPush(onGenerated: onGenerateRouters.onStream);
-                }, title: "Back To Home"),
+                height: context.mediaQueryHeight(context) * .07,
+                child: GradientButton(
+                    onPressed: () {
+                      context.navigatorPush(
+                          onGenerated: onGenerateRouters.onStream);
+                    },
+                    title: "Back To Home"),
               ),
-            ).toSpace(context: context,bottom: .02),
+            ).toSpace(context: context, bottom: .02),
           ],
         ),
         titleAppBar: "Setting",

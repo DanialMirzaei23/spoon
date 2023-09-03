@@ -120,21 +120,6 @@ mixin MediaScaffold {
               color: context.toTheme.colorScheme.onBackground,
               fontWeight: FontWeight.w600),
           centerTitle: true,
-          actions: [
-            Container(
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: context.toTheme.colorScheme.onPrimary,
-                  borderRadius: BorderRadius.circular(10)),
-              child: SvgGenerated(
-                      generate: Generate.asset,
-                      router: GenerateDataImages.filter,
-                      width: context.mediaQueryWidth(context) * .03,
-                      height: context.mediaQueryHeight(context) * .03)
-                  .toSpace(context: context, left: .01 , right: .01),
-            ).generateButton(onTap: reActionIconAppBar).toSpace(
-                context: context, top: .01, bottom: .01, left: .0, right: .04)
-          ],
         ),
         body: child.toSpace(context: context, left: .04, right: .04),
       );

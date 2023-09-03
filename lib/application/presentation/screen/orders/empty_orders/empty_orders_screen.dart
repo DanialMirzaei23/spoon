@@ -11,7 +11,9 @@ class EmptyOrdersScreen extends StatelessWidget {
     return MediaScaffold.nonScaffold(
       context: context,
       titleAppBar: context.toAppLocalization.my_orders,
-      reActionIconAppBar: () => print('object'),
+      reActionIconAppBar: () {
+        
+      },
       child: SizedBox(
         width: context.mediaQueryWidth(context),
         child: Column(
@@ -30,7 +32,7 @@ class EmptyOrdersScreen extends StatelessWidget {
               fontWeight: FontWeight.w500,
               fontSize: 16,
             ),
-            const Spacer(    
+            const Spacer(
               flex: 2,
             ),
             SizedBox(

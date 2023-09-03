@@ -19,7 +19,9 @@ class SearchScreen extends StatelessWidget {
     return MediaScaffold.nonScaffold(
       context: context,
       titleAppBar: '${context.toAppLocalization.result_for}"test word"',
-      reActionIconAppBar: () {},
+      reActionIconAppBar: () {
+        
+      },
       child: Column(
         children: [
           Spacer(),

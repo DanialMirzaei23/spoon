@@ -12,15 +12,18 @@ class ForgetPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return MediaScaffold.nonScaffold(
       context: context,
-      reActionIconAppBar: () => print("object"),
+      reActionIconAppBar: () {
+        
+      },
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SvgGenerated(
-              generate: Generate.asset,
-              router: GenerateDataImages.lock,
-              width: context.mediaQueryWidth(context) * .3,
-              height: context.mediaQueryHeight(context) * .3).toSpace(context: context,top: .07),
+                  generate: Generate.asset,
+                  router: GenerateDataImages.lock,
+                  width: context.mediaQueryWidth(context) * .3,
+                  height: context.mediaQueryHeight(context) * .3)
+              .toSpace(context: context, top: .07),
           [
             context.toAppLocalization
                 .enter_the_email_address_or_associated_with_your_account
@@ -37,19 +40,17 @@ class ForgetPassword extends StatelessWidget {
                 textInputAction: TextInputAction.go,
                 titleField: context.toAppLocalization.enter_your_email),
             toSpaceVertical(context: context, size: .01),
-            context.toAppLocalization.try_another_way
-                .toText(context: context,
+            context.toAppLocalization.try_another_way.toText(
+                context: context,
                 fontWeight: FontWeight.w500,
-              color: context.toTheme.colorScheme.onSecondaryContainer
-            ),
-
+                color: context.toTheme.colorScheme.onSecondaryContainer),
           ].toItem,
           ButtonCustomer(
-              onPressed: () {},
-              title: context.toAppLocalization.reset_password,
-              titleColor: context.toTheme.colorScheme.onPrimary,
-              buttonColor: context.toTheme.disabledColor).toSpace(context: context,bottom: .01),
-          
+                  onPressed: () {},
+                  title: context.toAppLocalization.reset_password,
+                  titleColor: context.toTheme.colorScheme.onPrimary,
+                  buttonColor: context.toTheme.disabledColor)
+              .toSpace(context: context, bottom: .01),
         ],
       ).toSpace(context: context, right: .08, left: .08),
       titleAppBar: context.toAppLocalization.forgot_password,
