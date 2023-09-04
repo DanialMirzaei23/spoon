@@ -1,21 +1,19 @@
 import 'package:spoon/application/packages/package.dart';
 
-sealed class CategoriesFilterState extends Equatable {}
+sealed class CategoriesState {}
 
-class CategoriesMinPriceFilterState extends CategoriesFilterState {
-  final double minPrice;
+class CategoriesMinPriceFilterState extends CategoriesState {
+  final double? minPrice;
 
-  CategoriesMinPriceFilterState({required this.minPrice});
-
-  @override
-  List<Object?> get props => [0];
+  CategoriesMinPriceFilterState({this.minPrice}) {
+    print('minPrice = $minPrice');
+  }
 }
 
-class CategoriesMaxPriceFilterState extends CategoriesFilterState {
-  final double maxPrice;
+class CategoriesMaxPriceFilterState extends CategoriesState {
+  final double? maxPrice;
 
-  CategoriesMaxPriceFilterState({this.maxPrice = 20});
-
-  @override
-  List<Object?> get props => [20];
+  CategoriesMaxPriceFilterState({this.maxPrice = 120}) {
+    print('maxPrice = $maxPrice');
+  }
 }

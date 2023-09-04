@@ -8,5 +8,5 @@ mixin LogicBloc {
       BottomNavigationBarBloc();
   static ProductAlbumCounterBloc productAlbumCounterBloc =
       ProductAlbumCounterBloc();
-  static CategoriesFilterBloc categoriesFilterBloc = CategoriesFilterBloc();
+  static CategoriesBloc categoriesBloc = CategoriesBloc();
 }

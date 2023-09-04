@@ -1,19 +1,15 @@
 import 'package:spoon/application/packages/package.dart';
 
-sealed class CategoriesFilterEvent extends Equatable {}
+sealed class CategoriesEvent {}
 
-class CategoriesMaxPriceFilterEvent extends CategoriesFilterEvent {
+class CategoriesMaxPriceFilterEvent extends CategoriesEvent {
   final double maxPrice;
 
   CategoriesMaxPriceFilterEvent({required this.maxPrice});
-  @override
-  List<Object?> get props => [20];
 }
 
-class CategoriesMinPriceFilterEvent extends CategoriesFilterEvent {
+class CategoriesMinPriceFilterEvent extends CategoriesEvent {
   final double minPrice;
 
   CategoriesMinPriceFilterEvent({required this.minPrice});
-  @override
-  List<Object?> get props => [0];
 }
