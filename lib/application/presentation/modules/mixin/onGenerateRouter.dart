@@ -15,4 +15,5 @@ mixin onGenerateRouters {
   static String onCart = "/onCart";
   static String onSearch = "/onSearch";
   static String onCategoriesContent = "/onCategoriesContent";
+  static String onReviews = "/onReviews";
 }

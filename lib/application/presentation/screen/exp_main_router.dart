@@ -80,3 +80,7 @@ export './cart/cart_screen.dart';
 
 // Screen Search
 export './search/search_screen.dart';
+
+
+// Reviews Screen
+export './home/features/categoriesScreen/reviews_screen.dart';

@@ -11,6 +11,7 @@ mixin helpGenerated {
   static String onProduct = "assets/icons/productScreen/";
   static String onSearch = "assets/icons/searchScreen/";
   static String onCategoriesContent = "assets/icons/categoriesContentScreen/";
+  static String onReview = "assets/icons/reviewScreen/";
 }
 
 mixin GenerateDataImages on helpGenerated {
@@ -78,5 +79,9 @@ mixin GenerateDataImages on helpGenerated {
   static String location_checkout = "${helpGenerated.onCheckOut}Location.svg";
   static String ticket_checkout = "${helpGenerated.onCheckOut}Ticket.svg";
   static String wallet_colored_checkout = "${helpGenerated.onCheckOut}Wallet-Colored.svg";
+
+  // Reviews Screen
+  static String threeDot = "${helpGenerated.onReview}3dot.svg";
+  
 
 }

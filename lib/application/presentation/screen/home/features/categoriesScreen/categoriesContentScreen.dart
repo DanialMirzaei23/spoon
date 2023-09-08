@@ -41,9 +41,6 @@ class CategoriesContentScreen extends StatelessWidget {
       icon: GenerateDataImages.filter,
       onTapActionIcon: () {
         showModalBottomSheet(
-          // constraints: BoxConstraints(
-          //     maxHeight: context.mediaQueryHeight(context),
-          //     minHeight: context.mediaQueryHeight(context) * .7),
           enableDrag: true,
           isScrollControlled: true,
           context: context,
@@ -396,7 +393,5 @@ class CategoriesContentScreen extends StatelessWidget {
       ),
       reActionBackIconAppBar: () {},
     );
-
-    ;
   }
 }
