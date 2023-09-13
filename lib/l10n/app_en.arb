@@ -96,8 +96,8 @@
   "add" : "Add",
   "voucher" : "Voucher",
   "place_order" : "Place Order",
-  "free" : "Free"
-
+  "free" : "Free",
+  "default0" : "Default"
 
 
 }
