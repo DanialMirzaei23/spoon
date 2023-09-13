@@ -60,6 +60,8 @@ export '../screen/orders/logic/exp_main_router.dart';
 
 // Screen CHECKOUT
 export '../screen/checkout/checkout_screen.dart';
+export './checkout/features/shipping_information/shipping_information_screen.dart';
+
 // Bloc CHECKOUT
 export '../screen/checkout/logic/exp_main_router.dart';
 

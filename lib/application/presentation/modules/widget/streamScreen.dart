@@ -57,7 +57,9 @@ class StreamScreen extends StatelessWidget {
                     ),
                   ),
                   Align(
-                    child: GenerateListTile(
+                    child: GenerateListTile(onTapTrailingText: () {
+                      
+                    },
                         image: GenerateDataImages.logout_drawer,
                         title: context.toAppLocalization.log_out,
                         icon: GenerateDataImages.arrow_drawer),

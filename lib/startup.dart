@@ -28,6 +28,7 @@ class StartUp extends StatelessWidget {
         onGenerateRouters.onForgetPassword: (_) => const ForgetPassword(),
         onGenerateRouters.onVerifyAccount: (_) => const VerifyAccount(),
         onGenerateRouters.onCheckOut: (_) => const CheckOutScreen(),
+        onGenerateRouters.onShippingInformation: (_) => const ShippingInformationScreen(),
         onGenerateRouters.onOrders: (_) => const OrdersScreen(),
         onGenerateRouters.onOrderStatus: (_) => const OrderStatusScreen(),
         onGenerateRouters.onProduct: (_) => const ProductScreen(),

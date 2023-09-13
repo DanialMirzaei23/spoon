@@ -18,11 +18,11 @@ class Setting extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: [
                 toSpaceVertical(context: context,size: .015),
-                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.language_setting, title: context.toAppLocalization.language, icon:GenerateDataImages.arrow_drawer)),
+                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.language_setting, title: context.toAppLocalization.language, icon:GenerateDataImages.arrow_drawer, onTapTrailingText: () {  },)),
                 toSpaceVertical(context: context,size: .015),
-                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.contact_setting, title: context.toAppLocalization.contact, icon:GenerateDataImages.arrow_drawer)),
+                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.contact_setting, title: context.toAppLocalization.contact, icon:GenerateDataImages.arrow_drawer, onTapTrailingText: () {  },)),
                 toSpaceVertical(context: context,size: .015),
-                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.info_setting, title: context.toAppLocalization.change_password, icon:GenerateDataImages.arrow_drawer)),
+                WhiteContainerGenerated(child: GenerateListTile(image: GenerateDataImages.info_setting, title: context.toAppLocalization.change_password, icon:GenerateDataImages.arrow_drawer, onTapTrailingText: () {  },)),
               ].toItem,
             ),
             Align(
