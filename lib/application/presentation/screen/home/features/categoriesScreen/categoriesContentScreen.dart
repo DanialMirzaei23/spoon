@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:spoon/application/presentation/modules/extension/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
+import 'package:spoon/application/presentation/modules/widget/modal_bottom_sheet.dart';
 import 'package:spoon/application/presentation/screen/home/features/categoriesScreen/logic/bloc/categories_filter_bloc.dart';
 import 'package:spoon/application/presentation/screen/home/features/categoriesScreen/logic/event/categories_filter_event.dart';
 import 'package:spoon/application/presentation/screen/home/features/categoriesScreen/logic/state/categories_state.dart';
@@ -40,214 +41,175 @@ class CategoriesContentScreen extends StatelessWidget {
       titleAppBar: 'Tops',
       icon: GenerateDataImages.filter,
       onTapActionIcon: () {
-        showModalBottomSheet(
-          enableDrag: true,
-          isScrollControlled: true,
-          context: context,
-          builder: (context) {
-            return Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(20),
+        generateModalBottomSheet(context,
+            title: context.toAppLocalization.filter,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                context.toAppLocalization.size.toText(
+                    context: context,
+                    fontSize: GenerateStyleFont.body4,
+                    fontWeight: FontWeight.w600,
+                    color: GenerateDataColors.grey_neutral.toHex),
+                toSpaceVertical(context: context, size: .01),
+                SizedBox(
+                  height: context.mediaQueryHeight(context) * .04,
+                  width: context.mediaQueryWidth(context),
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 7,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        alignment: Alignment.center,
+                        width: 36,
+                        height: 36,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                              color: GenerateDataColors.grey1_neutral.toHex,
+                              width: 2),
+                        ),
+                        child: 'XL'.toText(
+                            context: context,
+                            fontWeight: FontWeight.w500,
+                            color: GenerateDataColors.dark_neutral.toHex,
+                            fontSize: GenerateStyleFont.caption),
+                      ).toSpace(context: context, right: .027);
+                    },
                   ),
-                  color: GenerateDataColors.white_neutral.toHex),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
+                ),
+                toSpaceVertical(context: context, size: .025),
+                context.toAppLocalization.color.toText(
+                    context: context,
+                    fontSize: GenerateStyleFont.body4,
+                    fontWeight: FontWeight.w600,
+                    color: GenerateDataColors.grey_neutral.toHex),
+                toSpaceVertical(context: context, size: .01),
+                Wrap(
+                  spacing: 10,
+                  runSpacing: 10,
+                  children: filterColors
+                      .map(
+                        (value) => Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                color: GenerateDataColors.grey1_neutral.toHex),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: value
+                              .toText(
+                                  context: context,
+                                  fontWeight: FontWeight.w500,
+                                  color: GenerateDataColors.dark_neutral.toHex,
+                                  fontSize: GenerateStyleFont.body4)
+                              .toSpace(
+                                  context: context,
+                                  left: .04,
+                                  right: .04,
+                                  top: .01,
+                                  bottom: .01),
+                        ),
+                      )
+                      .toList(),
+                ),
+                toSpaceVertical(context: context, size: .025),
+                context.toAppLocalization.characteristics.toText(
+                    context: context,
+                    fontSize: GenerateStyleFont.body4,
+                    fontWeight: FontWeight.w600,
+                    color: GenerateDataColors.grey_neutral.toHex),
+                toSpaceVertical(context: context, size: .01),
+                Wrap(
+                  spacing: 10,
+                  runSpacing: 10,
+                  children: filterCharacteristics
+                      .map(
+                        (value) => Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                color: GenerateDataColors.grey1_neutral.toHex),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: value
+                              .toText(
+                                  context: context,
+                                  fontWeight: FontWeight.w500,
+                                  color: GenerateDataColors.dark_neutral.toHex,
+                                  fontSize: GenerateStyleFont.body4)
+                              .toSpace(
+                                  context: context,
+                                  left: .04,
+                                  right: .04,
+                                  top: .01,
+                                  bottom: .01),
+                        ),
+                      )
+                      .toList(),
+                ),
+                toSpaceVertical(context: context, size: .025),
+                context.toAppLocalization.price.toText(
+                    context: context,
+                    fontSize: GenerateStyleFont.body4,
+                    fontWeight: FontWeight.w600,
+                    color: GenerateDataColors.grey_neutral.toHex),
+                toSpaceVertical(context: context, size: .01),
+                SizedBox(
+                  height: 16,
+                  child: Stack(
+                    alignment: Alignment.center,
                     children: [
-                      SvgGenerated(
-                          generate: Generate.asset,
-                          router: GenerateDataImages.arrow_left,
-                          width: context.mediaQueryWidth(context) * .03,
-                          height: context.mediaQueryHeight(context) * .03),
-                      Spacer(),
-                      context.toAppLocalization.filter.toText(
-                          context: context,
-                          fontSize: GenerateStyleFont.headline1,
-                          fontWeight: FontWeight.w600,
-                          color: GenerateDataColors.dark_neutral.toHex),
-                      Spacer(),
+                      Container(
+                        height: 2,
+                        width: context.mediaQueryWidth(context),
+                        color: GenerateDataColors.grey1_neutral.toHex,
+                      ),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          height: 2,
+                          width: 100,
+                          color: GenerateDataColors.orange_primary.toHex,
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        child: Draggable(
+                          feedback: const SizedBox(),
+                          onDragUpdate: (details) {},
+                          child: Container(
+                            width: 16,
+                            height: 16,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: GenerateDataColors.dark_neutral.toHex,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 180,
+                        child: Draggable(
+                          feedback: Container(
+                            width: 30,
+                            height: 30,
+                            color: Colors.black,
+                          ),
+                          onDragUpdate: (details) {},
+                          child: Container(
+                            width: 16,
+                            height: 16,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: GenerateDataColors.orange_primary.toHex,
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
-                  toSpaceVertical(context: context, size: .025),
-                  context.toAppLocalization.size.toText(
-                      context: context,
-                      fontSize: GenerateStyleFont.body4,
-                      fontWeight: FontWeight.w600,
-                      color: GenerateDataColors.grey_neutral.toHex),
-                  toSpaceVertical(context: context, size: .01),
-                  SizedBox(
-                    height: context.mediaQueryHeight(context) * .04,
-                    width: context.mediaQueryWidth(context),
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 7,
-                      itemBuilder: (context, index) {
-                        return Container(
-                          alignment: Alignment.center,
-                          width: 36,
-                          height: 36,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                                color: GenerateDataColors.grey1_neutral.toHex,
-                                width: 2),
-                          ),
-                          child: 'XL'.toText(
-                              context: context,
-                              fontWeight: FontWeight.w500,
-                              color: GenerateDataColors.dark_neutral.toHex,
-                              fontSize: GenerateStyleFont.caption),
-                        ).toSpace(context: context, right: .027);
-                      },
-                    ),
-                  ),
-                  toSpaceVertical(context: context, size: .025),
-                  context.toAppLocalization.color.toText(
-                      context: context,
-                      fontSize: GenerateStyleFont.body4,
-                      fontWeight: FontWeight.w600,
-                      color: GenerateDataColors.grey_neutral.toHex),
-                  toSpaceVertical(context: context, size: .01),
-                  Wrap(
-                    spacing: 10,
-                    runSpacing: 10,
-                    children: filterColors
-                        .map(
-                          (value) => Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                  color:
-                                      GenerateDataColors.grey1_neutral.toHex),
-                              borderRadius: BorderRadius.circular(16),
-                            ),
-                            child: value
-                                .toText(
-                                    context: context,
-                                    fontWeight: FontWeight.w500,
-                                    color:
-                                        GenerateDataColors.dark_neutral.toHex,
-                                    fontSize: GenerateStyleFont.body4)
-                                .toSpace(
-                                    context: context,
-                                    left: .04,
-                                    right: .04,
-                                    top: .01,
-                                    bottom: .01),
-                          ),
-                        )
-                        .toList(),
-                  ),
-                  toSpaceVertical(context: context, size: .025),
-                  context.toAppLocalization.characteristics.toText(
-                      context: context,
-                      fontSize: GenerateStyleFont.body4,
-                      fontWeight: FontWeight.w600,
-                      color: GenerateDataColors.grey_neutral.toHex),
-                  toSpaceVertical(context: context, size: .01),
-                  Wrap(
-                    spacing: 10,
-                    runSpacing: 10,
-                    children: filterCharacteristics
-                        .map(
-                          (value) => Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                  color:
-                                      GenerateDataColors.grey1_neutral.toHex),
-                              borderRadius: BorderRadius.circular(16),
-                            ),
-                            child: value
-                                .toText(
-                                    context: context,
-                                    fontWeight: FontWeight.w500,
-                                    color:
-                                        GenerateDataColors.dark_neutral.toHex,
-                                    fontSize: GenerateStyleFont.body4)
-                                .toSpace(
-                                    context: context,
-                                    left: .04,
-                                    right: .04,
-                                    top: .01,
-                                    bottom: .01),
-                          ),
-                        )
-                        .toList(),
-                  ),
-                  toSpaceVertical(context: context, size: .025),
-                  context.toAppLocalization.price.toText(
-                      context: context,
-                      fontSize: GenerateStyleFont.body4,
-                      fontWeight: FontWeight.w600,
-                      color: GenerateDataColors.grey_neutral.toHex),
-                  toSpaceVertical(context: context, size: .01),
-                  SizedBox(
-                    height: 16,
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Container(
-                          height: 2,
-                          width: context.mediaQueryWidth(context),
-                          color: GenerateDataColors.grey1_neutral.toHex,
-                        ),
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Container(
-                            height: 2,
-                            width: 100,
-                            color: GenerateDataColors.orange_primary.toHex,
-                          ),
-                        ),
-                        Positioned(
-                          left: 0,
-                          child: Draggable(
-                            feedback: const SizedBox(),
-                            onDragUpdate: (details) {},
-                            child: Container(
-                              width: 16,
-                              height: 16,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: GenerateDataColors.dark_neutral.toHex,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          left: 180,
-                          child: Draggable(
-                            feedback: Container(
-                              width: 30,
-                              height: 30,
-                              color: Colors.black,
-                            ),
-                            onDragUpdate: (details) {},
-                            child: Container(
-                              width: 16,
-                              height: 16,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: GenerateDataColors.orange_primary.toHex,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ).toSpace(
-                  context: context,
-                  right: .04,
-                  left: .04,
-                  top: .02,
-                  bottom: .03),
-            );
-          },
-        );
+                )
+              ],
+            ));
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,6 +1,7 @@
 import 'package:spoon/application/presentation/modules/extension/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/mixin/exp_main_router.dart';
 import 'package:spoon/application/presentation/modules/widget/exp_main_router.dart';
+import 'package:spoon/application/presentation/modules/widget/modal_bottom_sheet.dart';
 import '../../../../../packages/package.dart';
 import '../../../../modules/widget/svg_generate.dart';
 
@@ -95,8 +96,12 @@ class ShippingInformationScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w400,
                                 color: GenerateDataColors.orange_primary.toHex)
                             .generateButton(
-                              onTap: () {},
-                            )
+                          onTap: () {
+                            generateModalBottomSheet(context,
+                                title: context.toAppLocalization.edit,
+                                child: SizedBox());
+                          },
+                        )
                       ],
                     ),
                   ),
