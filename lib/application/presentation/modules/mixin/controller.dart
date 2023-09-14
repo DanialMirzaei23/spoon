@@ -8,4 +8,10 @@ mixin Controller {
   static TextEditingController emailRegister = TextEditingController();
   static TextEditingController passwordRegister = TextEditingController();
   static SearchController searchAnchor = SearchController();
+  static TextEditingController firstNameEditCheckout = TextEditingController();
+  static TextEditingController lastNameEditCheckout = TextEditingController();
+  static TextEditingController phoneNumberEditCheckout = TextEditingController();
+  static TextEditingController addressEditCheckout = TextEditingController();
+  static TextEditingController cityEditCheckout = TextEditingController();
+  static TextEditingController zipCodeEditCheckout = TextEditingController();
 }

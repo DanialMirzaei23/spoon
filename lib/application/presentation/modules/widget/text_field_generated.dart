@@ -16,8 +16,10 @@ class TextFieldGenerated extends StatelessWidget {
       required this.textEditingController,
       required this.textInputType,
       required this.textInputAction,
-      required this.titleField});
+      required this.titleField,
+      this.hasBorder = false});
 
+  final bool hasBorder;
   final String nameField, errText, titleField;
   final TextEditingController textEditingController;
 
@@ -53,11 +55,11 @@ class TextFieldGenerated extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                      child:  nameField.toText(
-                              context: context,
-                              color: GenerateDataColors.grey_neutral.toHex,
-                              fontWeight: FontWeight.w500),
-                    ).toSpace(context: context, bottom: .01, top: .015),
+                child: nameField.toText(
+                    context: context,
+                    color: GenerateDataColors.grey_neutral.toHex,
+                    fontWeight: FontWeight.w500),
+              ).toSpace(context: context, bottom: .01, top: .015),
               TextFormField(
                 style: ToStyle(
                   fontWeight: FontWeight.w600,
@@ -79,26 +81,34 @@ class TextFieldGenerated extends StatelessWidget {
 
                   // disabledBorder: InputBorder.none,
                   enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide.none,
+                      borderSide: hasBorder
+                          ? BorderSide(
+                              color: GenerateDataColors.grey1_neutral.toHex,
+                              width: 1.5,
+                            )
+                          : BorderSide.none,
                       borderRadius: BorderRadius.circular(15)),
                   isDense: true,
                   //GenerateDataColors.orange_primary.toHex
-                  errorBorder: handlingText() == context.toAppLocalization.good_email
+                  errorBorder: handlingText() ==
+                          context.toAppLocalization.good_email
                       ? context.handlerWidgetErrorMode(
                           colorBorder: GenerateDataColors.orange_primary.toHex)
-                      : handlingText() == context.toAppLocalization.the_email_is_incorrect
+                      : handlingText() ==
+                              context.toAppLocalization.the_email_is_incorrect
                           ? context.handlerWidgetErrorMode(
                               colorBorder: GenerateDataColors.red.toHex)
-                          :
-                          handlingText() == context.toAppLocalization.success
+                          : handlingText() == context.toAppLocalization.success
                               ? context.handlerWidgetErrorMode(
                                   colorBorder: GenerateDataColors.success.toHex)
                               : null,
                   errorText: handlingText(),
-                  focusedErrorBorder: handlingText() == context.toAppLocalization.good_email
+                  focusedErrorBorder: handlingText() ==
+                          context.toAppLocalization.good_email
                       ? context.handlerWidgetErrorMode(
                           colorBorder: GenerateDataColors.orange_primary.toHex)
-                      : handlingText() == context.toAppLocalization.the_email_is_incorrect
+                      : handlingText() ==
+                              context.toAppLocalization.the_email_is_incorrect
                           ? context.handlerWidgetErrorMode(
                               colorBorder: GenerateDataColors.red.toHex)
                           : //
@@ -106,10 +116,12 @@ class TextFieldGenerated extends StatelessWidget {
                               ? context.handlerWidgetErrorMode(
                                   colorBorder: GenerateDataColors.success.toHex)
                               : null,
-                  errorStyle: handlingText() == context.toAppLocalization.good_email
+                  errorStyle: handlingText() ==
+                          context.toAppLocalization.good_email
                       ? context.handlerWidgetErrorModeText(
                           colorBorder: GenerateDataColors.orange_primary.toHex)
-                      : handlingText() == context.toAppLocalization.the_email_is_incorrect
+                      : handlingText() ==
+                              context.toAppLocalization.the_email_is_incorrect
                           ? context.handlerWidgetErrorModeText(
                               colorBorder: GenerateDataColors.red.toHex)
                           : handlingText() == context.toAppLocalization.success

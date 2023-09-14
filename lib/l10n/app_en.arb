@@ -104,7 +104,15 @@
   "voucher" : "Voucher",
   "place_order" : "Place Order",
   "free" : "Free",
-  "default0" : "Default"
+  "default0" : "Default",
+  "first_name" : "First name",
+  "last_name" : "Last name",
+  "phone_number" : "Phone number",
+  "address" : "Address",
+  "city" : "City",
+  "zip_code" : "Zip Code",
+  "make_it_default_delivery_address" : "Make it default delivery address",
+  "save" : "Save"
 
 
 }

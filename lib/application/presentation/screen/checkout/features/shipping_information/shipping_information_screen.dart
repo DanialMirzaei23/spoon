@@ -99,7 +99,126 @@ class ShippingInformationScreen extends StatelessWidget {
                           onTap: () {
                             generateModalBottomSheet(context,
                                 title: context.toAppLocalization.edit,
-                                child: SizedBox());
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: TextFieldGenerated(
+                                            nameField: context
+                                                .toAppLocalization.first_name,
+                                            errText: '',
+                                            textEditingController: Controller
+                                                .firstNameEditCheckout,
+                                            textInputType: TextInputType.name,
+                                            textInputAction:
+                                                TextInputAction.next,
+                                            titleField: '',
+                                            hasBorder: true,
+                                          ),
+                                        ),
+                                        toSpaceLine(context: context),
+                                        Expanded(
+                                          child: TextFieldGenerated(
+                                            nameField: context
+                                                .toAppLocalization.last_name,
+                                            errText: '',
+                                            textEditingController:
+                                                Controller.lastNameEditCheckout,
+                                            textInputType: TextInputType.name,
+                                            textInputAction:
+                                                TextInputAction.next,
+                                            titleField: '',
+                                            hasBorder: true,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    TextFieldGenerated(
+                                        hasBorder: true,
+                                        nameField: context
+                                            .toAppLocalization.phone_number,
+                                        errText: '',
+                                        textEditingController:
+                                            Controller.phoneNumberEditCheckout,
+                                        textInputType: TextInputType.phone,
+                                        textInputAction: TextInputAction.next,
+                                        titleField: ''),
+                                    TextFieldGenerated(
+                                        hasBorder: true,
+                                        nameField:
+                                            context.toAppLocalization.address,
+                                        errText: '',
+                                        textEditingController:
+                                            Controller.addressEditCheckout,
+                                        textInputType: TextInputType.text,
+                                        textInputAction: TextInputAction.next,
+                                        titleField: ''),
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: TextFieldGenerated(
+                                            nameField:
+                                                context.toAppLocalization.city,
+                                            errText: '',
+                                            textEditingController:
+                                                Controller.cityEditCheckout,
+                                            textInputType: TextInputType.text,
+                                            textInputAction:
+                                                TextInputAction.next,
+                                            titleField: '',
+                                            hasBorder: true,
+                                          ),
+                                        ),
+                                        toSpaceLine(context: context),
+                                        Expanded(
+                                          child: TextFieldGenerated(
+                                            nameField: context
+                                                .toAppLocalization.zip_code,
+                                            errText: '',
+                                            textEditingController:
+                                                Controller.zipCodeEditCheckout,
+                                            textInputType: TextInputType.number,
+                                            textInputAction:
+                                                TextInputAction.next,
+                                            titleField: '',
+                                            hasBorder: true,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Switch(
+                                          value: false,
+                                          inactiveThumbColor: GenerateDataColors
+                                              .white_neutral.toHex,
+                                          onChanged: (value) {},
+                                        ),
+                                        toSpaceLine(
+                                            context: context, size: .03),
+                                        Expanded(
+                                          child: context.toAppLocalization
+                                              .make_it_default_delivery_address
+                                              .toText(
+                                                  context: context,
+                                                  color: GenerateDataColors
+                                                      .grey_neutral.toHex,
+                                                  fontWeight: FontWeight.w500),
+                                        ),
+                                      ],
+                                    ),
+                                    toSpaceVertical(
+                                        context: context, size: .03),
+                                    SizedBox(
+                                      width: context.mediaQueryWidth(context),
+                                      child: GradientButton(
+                                          onPressed: () {},
+                                          title:
+                                              context.toAppLocalization.save),
+                                    )
+                                  ],
+                                ));
                           },
                         )
                       ],

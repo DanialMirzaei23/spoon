@@ -104,6 +104,14 @@
   "voucher" : "کوپن",
   "place_order" : "سفارش دهید",
   "free" : "رایگان",
-  "default0" : "پیش فرض"
+  "default0" : "پیش فرض",
+  "first_name" : "نام",
+  "last_name" : "نام خانوادگی",
+  "phone_number" : "شماره موبایل",
+  "address" : "آدرس",
+  "city" : "شهر",
+  "zip_code" : "کد پستی",
+  "make_it_default_delivery_address" : "آدرس پیش فرض برای تحویل محصول",
+  "save" : "ذخیره"
 
 }
