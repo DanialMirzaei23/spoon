@@ -9,6 +9,9 @@ mixin helpGenerated {
   static String onFeedBack = "assets/icons/feedback/";
   static String onSetting = "assets/icons/setting/";
   static String onProduct = "assets/icons/productScreen/";
+  static String onSearch = "assets/icons/searchScreen/";
+  static String onCategoriesContent = "assets/icons/categoriesContentScreen/";
+  static String onReview = "assets/icons/reviewScreen/";
 }
 
 mixin GenerateDataImages on helpGenerated {
@@ -26,7 +29,6 @@ mixin GenerateDataImages on helpGenerated {
   //Orders screen
   static String empty_orders = "${helpGenerated.onOrders}Box.svg";
   static String arrow_right = "${helpGenerated.onOrders}Arrow-Right.svg";
-
 
   //home screen
   static String fire_icon = "${helpGenerated.onHome}fire-icon.svg";
@@ -56,6 +58,11 @@ mixin GenerateDataImages on helpGenerated {
   static String product_favorite = "${helpGenerated.onProduct}Heart.svg";
   static String star = "${helpGenerated.onProduct}Star.svg";
 
+  //Search screen
+  static String empty_search = "${helpGenerated.onSearch}EmptySearch.svg";
+
+  //CategoriesContent Screen
+  static String filter = "${helpGenerated.onCategoriesContent}Filter.svg";
   // feedback
   static String camera_feedback = "${helpGenerated.onFeedBack}Camera.svg";
   static String like_feedback = "${helpGenerated.onFeedBack}Like.svg";
@@ -72,5 +79,9 @@ mixin GenerateDataImages on helpGenerated {
   static String location_checkout = "${helpGenerated.onCheckOut}Location.svg";
   static String ticket_checkout = "${helpGenerated.onCheckOut}Ticket.svg";
   static String wallet_colored_checkout = "${helpGenerated.onCheckOut}Wallet-Colored.svg";
+
+  // Reviews Screen
+  static String threeDot = "${helpGenerated.onReview}3dot.svg";
+  
 
 }

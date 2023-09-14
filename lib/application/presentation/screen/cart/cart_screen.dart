@@ -25,14 +25,15 @@ class CartScreen extends StatelessWidget {
             ),
             toSpaceVertical(context: context, size: .01),
             Expanded(
-                child: ListView.separated(
-                    itemBuilder: (context, index) {
-                      return CartItemGenerated();
-                    },
-                    separatorBuilder: (context, index) {
-                      return toSpaceVertical(context: context, size: .014);
-                    },
-                    itemCount: 3),),
+              child: ListView.separated(
+                  itemBuilder: (context, index) {
+                    return CartItemGenerated();
+                  },
+                  separatorBuilder: (context, index) {
+                    return toSpaceVertical(context: context, size: .014);
+                  },
+                  itemCount: 3),
+            ),
             WhiteContainerGenerated(
                 hasShadow: true,
                 child: <Widget>[

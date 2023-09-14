@@ -30,7 +30,7 @@ class EmptyOrdersScreen extends StatelessWidget {
               fontWeight: FontWeight.w500,
               fontSize: 16,
             ),
-            const Spacer(    
+            const Spacer(
               flex: 2,
             ),
             SizedBox(

@@ -4,7 +4,7 @@
 export '../screen/home/home_screen.dart';
 
 // Screen MENU
-export '../screen/home/features/menuScreen/menuScreen.dart';
+export 'home/features/categoriesScreen/categoriesScreen.dart';
 
 // Screen FAVORITE
 export '../screen/home/features/favoriteScreen/favoriteScreen.dart';
@@ -78,3 +78,11 @@ export './product/logic/exp_mian_router.dart';
 
 // Screen Cart
 export './cart/cart_screen.dart';
+
+
+// Screen Search
+export './search/search_screen.dart';
+
+
+// Reviews Screen
+export './home/features/categoriesScreen/reviews_screen.dart';

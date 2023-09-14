@@ -34,7 +34,7 @@ class Setting extends StatelessWidget {
                   context.navigatorPush(onGenerated: onGenerateRouters.onStream);
                 }, title: context.toAppLocalization.back_to_home),
               ),
-            ).toSpace(context: context,bottom: .02),
+            ).toSpace(context: context, bottom: .02),
           ],
         ),
         titleAppBar: context.toAppLocalization.setting,
