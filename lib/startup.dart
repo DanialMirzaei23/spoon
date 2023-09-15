@@ -30,6 +30,7 @@ class StartUp extends StatelessWidget {
         onGenerateRouters.onVerifyAccount: (_) => const VerifyAccount(),
         onGenerateRouters.onCheckOut: (_) => const CheckOutScreen(),
         onGenerateRouters.onShippingInformation: (_) => const ShippingInformationScreen(),
+        onGenerateRouters.onPaymentMethods: (_) => const PaymentMethodsScreen(),
         onGenerateRouters.onOrders: (_) => const OrdersScreen(),
         onGenerateRouters.onOrderStatus: (_) => const OrderStatusScreen(),
         onGenerateRouters.onProduct: (_) => const ProductScreen(),

@@ -66,7 +66,10 @@ class CheckOutScreen extends StatelessWidget {
         WhiteContainerGenerated(
           hasShadow: true,
           child: GenerateListTile(
-            onTapTrailingText: () {},
+            onTapTrailingText: () {
+              context.navigatorPush(
+                  onGenerated: onGenerateRouters.onPaymentMethods);
+            },
             image: GenerateDataImages.wallet_colored_checkout,
             title: context.toAppLocalization.payment_method,
             icon: '',
