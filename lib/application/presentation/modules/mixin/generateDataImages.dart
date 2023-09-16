@@ -79,6 +79,13 @@ mixin GenerateDataImages on helpGenerated {
   static String location_checkout = "${helpGenerated.onCheckOut}Location.svg";
   static String ticket_checkout = "${helpGenerated.onCheckOut}Ticket.svg";
   static String wallet_colored_checkout = "${helpGenerated.onCheckOut}Wallet-Colored.svg";
+  static String card_logo_checkout = "${helpGenerated.onCheckOut}Card-Logo.svg";
+  static String card_checkout = "${helpGenerated.onCheckOut}Card.svg";
+  static String google_logo_checkout = "${helpGenerated.onCheckOut}Google-logo.svg";
+  static String paypal_checkout = "${helpGenerated.onCheckOut}PayPal.svg";
+  static String arrow_up_checkout = "${helpGenerated.onCheckOut}Arrow-Up.svg";
+  static String check_checkout = "${helpGenerated.onCheckOut}Check.svg";
+  static String arrow_down_checkout = "${helpGenerated.onCheckOut}Arrow-Down.svg";
 
   // Reviews Screen
   static String threeDot = "${helpGenerated.onReview}3dot.svg";

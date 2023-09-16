@@ -112,6 +112,19 @@
   "city" : "شهر",
   "zip_code" : "کد پستی",
   "make_it_default_delivery_address" : "آدرس پیش فرض برای تحویل محصول",
-  "save" : "ذخیره"
+  "save" : "ذخیره",
+  "payment_methods" : "روش های پرداخت",
+  "credit_cards" : "کارت های اعتباری",
+  "add_card" : "اضافه کردن کارت",
+  "paypal" : "پی پل",
+  "google_pay" : "گوگل پی",
+  "checkout" : "پرداخت",
+   "add_new_card" : "اضافه کردن کارت جدید",
+   "card_type": "نوع کارت",
+   "name_on_card" : "نام روی کارت",
+   "card_number" : "شماره کارت",
+   "expire_date" : "تاریخ انقضا",
+   "cvv" : "CVV کد",
+   "save_this_card_for_future_payment" : "انتخاب برای پرداخت های بعدی"
 
 }

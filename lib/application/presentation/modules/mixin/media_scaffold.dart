@@ -164,6 +164,7 @@ mixin MediaScaffold {
           onTapActionIcon,
           bool isIco = false}) =>
       Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: context.toTheme.colorScheme.background,
         appBar: AppBar(
           elevation: 0.0,

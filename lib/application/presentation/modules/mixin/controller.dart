@@ -14,4 +14,8 @@ mixin Controller {
   static TextEditingController addressEditCheckout = TextEditingController();
   static TextEditingController cityEditCheckout = TextEditingController();
   static TextEditingController zipCodeEditCheckout = TextEditingController();
+  static TextEditingController nameOnCardAddCheckout = TextEditingController();
+  static TextEditingController cardNumberAddCheckout = TextEditingController();
+  static TextEditingController expireDateAddCheckout = TextEditingController();
+  static TextEditingController cvvAddCheckout = TextEditingController();
 }

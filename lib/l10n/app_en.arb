@@ -112,7 +112,20 @@
   "city" : "City",
   "zip_code" : "Zip Code",
   "make_it_default_delivery_address" : "Make it default delivery address",
-  "save" : "Save"
+  "save" : "Save",
+  "payment_methods" : "Payment Methods",
+  "credit_cards" : "Credit Cards",
+  "add_card" : "Add Card",
+  "paypal" : "Paypal",
+  "google_pay" : "Google Pay",
+  "checkout" : "Checkout",
+   "add_new_card" : "Add New Card",
+   "card_type": "Card type",
+   "name_on_card" : "Name on card",
+   "card_number" : "Card number",
+   "expire_date" : "Expire date",
+   "cvv" : "CVV",
+   "save_this_card_for_future_payment" : "Save this card for future payment"
 
 
 }
