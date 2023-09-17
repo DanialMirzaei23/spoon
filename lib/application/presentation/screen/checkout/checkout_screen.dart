@@ -443,20 +443,45 @@ class CheckOutScreen extends StatelessWidget {
                   generateModalBottomSheet(
                     context,
                     title: context.toAppLocalization.password,
-                    child: PinCodeGenerate(
-                      validator: (code) {
-                        print(code);
-                        if (code == "1234") {
-                          print("object");
-                        }
-                        return '';
-                      },
-                      onSave: (pass) {
-                        return 'code';
-                      },
-                      onTap: () {},
-                      textEditingController: TextEditingController(),
-                     ),
+                    child: Column(
+                      children: [
+                        toSpaceVertical(context: context, size: .02),
+                        SizedBox(
+                          width: context.mediaQueryWidth(context) * .6,
+                          child: context.toAppLocalization
+                              .enter_your_password_to_finish_your_order
+                              .toText(
+                                  context: context,
+                                  fontWeight: FontWeight.w500,
+                                  color: GenerateDataColors.grey_neutral.toHex,
+                                  textAlign: TextAlign.center),
+                        ),
+                        toSpaceVertical(context: context, size: .02),
+                        PinCodeGenerate(
+                          hasBorder: true,
+                          validator: (code) {
+                            print(code);
+                            if (code == "1234") {
+                              print("object");
+                            }
+                            return '';
+                          },
+                          onSave: (pass) {
+                            return 'code';
+                          },
+                          onTap: () {},
+                          textEditingController: TextEditingController(),
+                        ),
+                        toSpaceVertical(context: context, size: .2),
+                        ButtonCustomer(
+                                onPressed: () {},
+                                title: context.toAppLocalization.confirm,
+                                titleColor:
+                                    context.toTheme.colorScheme.onPrimary,
+                                buttonColor: context.toTheme.disabledColor)
+                            .toSpace(context: context, bottom: .01)
+                      ],
+                    ),
                   );
                 },
                 title: context.toAppLocalization.place_order),

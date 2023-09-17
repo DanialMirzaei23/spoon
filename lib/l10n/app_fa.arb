@@ -129,6 +129,8 @@
    "enter_your_code" : "کد را وارد کنید",
    "coupon_expires" : "انقضا کوپن",
    "condition" : "شرایط",
-   "payment_success" : "پرداخت موفقیت آمیز بود"
+   "payment_success" : "پرداخت موفقیت آمیز بود",
+   "enter_your_password_to_finish_your_order" : "رمز خود را برای اتمام مراحل سفارشتان وارد کنید",
+   "confirm" : "تایید"
 
 }
