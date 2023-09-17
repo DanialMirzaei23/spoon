@@ -15,7 +15,7 @@ class StartUp extends StatelessWidget {
       locale: Locale(GenerateCountry.en),
 
       // Initial Router
-      initialRoute: onGenerateRouters.onCheckOut,
+      initialRoute: onGenerateRouters.onPaymentSuccess,
 
       // Data Router
       routes: {
@@ -31,6 +31,7 @@ class StartUp extends StatelessWidget {
         onGenerateRouters.onCheckOut: (_) => const CheckOutScreen(),
         onGenerateRouters.onShippingInformation: (_) => const ShippingInformationScreen(),
         onGenerateRouters.onPaymentMethods: (_) => const PaymentMethodsScreen(),
+        onGenerateRouters.onPaymentSuccess: (_) => const PaymentSuccessScreen(),
         onGenerateRouters.onOrders: (_) => const OrdersScreen(),
         onGenerateRouters.onOrderStatus: (_) => const OrderStatusScreen(),
         onGenerateRouters.onProduct: (_) => const ProductScreen(),

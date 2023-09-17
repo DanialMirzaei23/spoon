@@ -11,6 +11,7 @@ mixin onGenerateRouters {
   static String onCheckOut = "/onCheckOut";
   static String onShippingInformation = "/onShippingInformation";
   static String onPaymentMethods = "/onPaymentMethods";
+  static String onPaymentSuccess = "/onPaymentSuccess";
   static String onOrders = "/onOrders";
   static String onOrderStatus = "/onOrderStatus";
   static String onProduct = "/onProduct";

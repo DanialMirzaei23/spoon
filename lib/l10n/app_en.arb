@@ -125,7 +125,11 @@
    "card_number" : "Card number",
    "expire_date" : "Expire date",
    "cvv" : "CVV",
-   "save_this_card_for_future_payment" : "Save this card for future payment"
+   "save_this_card_for_future_payment" : "Save this card for future payment",
+   "enter_your_code" : "Enter your code",
+   "coupon_expires" : "COUPON EXPIRES",
+   "condition" : "Condition",
+   "payment_success" : "Payment success!"
 
 
 }

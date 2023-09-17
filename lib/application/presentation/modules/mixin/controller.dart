@@ -18,4 +18,5 @@ mixin Controller {
   static TextEditingController cardNumberAddCheckout = TextEditingController();
   static TextEditingController expireDateAddCheckout = TextEditingController();
   static TextEditingController cvvAddCheckout = TextEditingController();
+  static TextEditingController promoCodeCheckout = TextEditingController();
 }

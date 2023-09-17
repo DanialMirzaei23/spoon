@@ -86,6 +86,7 @@ mixin GenerateDataImages on helpGenerated {
   static String arrow_up_checkout = "${helpGenerated.onCheckOut}Arrow-Up.svg";
   static String check_checkout = "${helpGenerated.onCheckOut}Check.svg";
   static String arrow_down_checkout = "${helpGenerated.onCheckOut}Arrow-Down.svg";
+  static String payment_success_checkout = "${helpGenerated.onCheckOut}PaymentSuccess.svg";
 
   // Reviews Screen
   static String threeDot = "${helpGenerated.onReview}3dot.svg";

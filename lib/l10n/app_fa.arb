@@ -125,6 +125,10 @@
    "card_number" : "شماره کارت",
    "expire_date" : "تاریخ انقضا",
    "cvv" : "CVV کد",
-   "save_this_card_for_future_payment" : "انتخاب برای پرداخت های بعدی"
+   "save_this_card_for_future_payment" : "انتخاب برای پرداخت های بعدی",
+   "enter_your_code" : "کد را وارد کنید",
+   "coupon_expires" : "انقضا کوپن",
+   "condition" : "شرایط",
+   "payment_success" : "پرداخت موفقیت آمیز بود"
 
 }
