@@ -15,13 +15,14 @@ class StartUp extends StatelessWidget {
       locale: Locale(GenerateCountry.en),
 
       // Initial Router
-      initialRoute: onGenerateRouters.onCheckOut,
+      initialRoute: onGenerateRouters.onMap,
 
       // Data Router
       routes: {
         onGenerateRouters.onBoarding: (_) => const OnBoarding(),
         onGenerateRouters.onStream: (_) => const StreamScreen(),
         onGenerateRouters.onSetting: (_) => const Setting(),
+        onGenerateRouters.onMap: (_) => const MapScreen(),
         onGenerateRouters.onHome: (_) => const HomeScreen(),
         onGenerateRouters.onFeedBack: (_) => const FeedBackScreen(),
         onGenerateRouters.onLogin: (_) => const LoginScreen(),

@@ -88,3 +88,6 @@ export './search/search_screen.dart';
 
 // Reviews Screen
 export './home/features/categoriesScreen/reviews_screen.dart';
+
+// Reviews Screen
+export './map/map_screen.dart';

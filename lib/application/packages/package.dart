@@ -10,3 +10,5 @@ export 'package:bloc/bloc.dart';
 export 'package:equatable/equatable.dart';
 export 'package:flutter/animation.dart';
 export 'package:pin_code_fields/pin_code_fields.dart';
+export 'package:flutter_map/flutter_map.dart';
+
