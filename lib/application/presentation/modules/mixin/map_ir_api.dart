@@ -1,0 +1,8 @@
+mixin MapIrApiConstants {
+  static String apiToken =
+      'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIwN2ZiNmMzMDQ2ODQ0YTkzYzg0NzhhY2ViNWFiNDkwYjBiNWRkMWJlMDA1ZDEwZDc1YWEzMDY5YzVhM2NjYjc1ZDBmZTNhZDdkNWVmN2MwIn0.eyJhdWQiOiIyNDMwNSIsImp0aSI6IjIwN2ZiNmMzMDQ2ODQ0YTkzYzg0NzhhY2ViNWFiNDkwYjBiNWRkMWJlMDA1ZDEwZDc1YWEzMDY5YzVhM2NjYjc1ZDBmZTNhZDdkNWVmN2MwIiwiaWF0IjoxNjk1OTkxMTYxLCJuYmYiOjE2OTU5OTExNjEsImV4cCI6MTY5ODQ5Njc2MSwic3ViIjoiIiwic2NvcGVzIjpbImJhc2ljIl19.DXprl9_dzTm0REAcmlGP-lHxY_b5Yut2edoZwS0vndT5FmJ4o7efxcxow_6C0d9TW3pAOgsEVDb91PMNMESEQFvJlbvCY__q0cIBXb-Q8NY2z3iIzilTZJtxMDnDPO4GDw4UYX_bDtIHWCfNOyzE69BeQxOtB8Q3Dr3X4WvIKjhHRKatUajxgwCazCIHtNnJDdLc6AbNLainAxZCHWlnj9TfCHI9uhrf1ZHCBM4-mj1WuuXBTfD9yRaRGxyt1Z7yIEc9DxAkAmD4K_3Bh6A0jgZBw4qPVDubjitp0h1tSh4CP7JOQgoz5SdDPgAFpo4o1qJuOQrh5nOLnyQ5OBSDIg';
+
+  static String mapIrApiUrl = 'https://map.ir/routes/route/v1/driving';
+  static Map<String,dynamic> queryParams = {'geometries': 'geojson'};
+  static Map<String,dynamic> header = {'x-api-key': apiToken};
+}

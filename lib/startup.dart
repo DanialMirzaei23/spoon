@@ -22,7 +22,7 @@ class StartUp extends StatelessWidget {
         onGenerateRouters.onBoarding: (_) => const OnBoarding(),
         onGenerateRouters.onStream: (_) => const StreamScreen(),
         onGenerateRouters.onSetting: (_) => const Setting(),
-        onGenerateRouters.onMap: (_) => const MapScreen(),
+        onGenerateRouters.onMap: (_) => MapScreen(),
         onGenerateRouters.onHome: (_) => const HomeScreen(),
         onGenerateRouters.onFeedBack: (_) => const FeedBackScreen(),
         onGenerateRouters.onLogin: (_) => const LoginScreen(),
