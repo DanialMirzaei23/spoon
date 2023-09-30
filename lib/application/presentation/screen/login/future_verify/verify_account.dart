@@ -12,7 +12,7 @@ class VerifyAccount extends StatelessWidget {
     return MediaScaffold.nonScaffold(
       context: context,
       // ignore: avoid_print
-      reActionBackIconAppBar: () => print("object"),
+      reActionBackIconAppBar: () => context.navigatorPush(onGenerated: onGenerateRouters.onLogin),
       child: SingleChildScrollView(
         child: Container(
           height: context.mediaQueryHeight(context) * .88,
@@ -57,7 +57,9 @@ class VerifyAccount extends StatelessWidget {
                     color: context.toTheme.colorScheme.onSecondaryContainer),
               ].toItem,
               ButtonCustomer(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.navigatorPush(onGenerated: onGenerateRouters.onStream);
+                      },
                       title: context.toAppLocalization.reset_password,
                       titleColor: context.toTheme.colorScheme.onPrimary,
                       buttonColor: context.toTheme.disabledColor)

@@ -12,7 +12,7 @@ class SocialMedia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: context.mediaQueryWidth(context)*.85,
+      width: context.mediaQueryWidth(context)*.9,
       decoration: BoxDecoration(
           color:GenerateDataColors.white_neutral.toHex,
           borderRadius: BorderRadius.circular(10)

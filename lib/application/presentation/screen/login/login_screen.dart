@@ -52,7 +52,9 @@ class LoginScreen extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 color: GenerateDataColors.orange1_btn.toHex,
                 fontSize: GenerateStyleFont.caption),
-          ).toSpace(context: context, top: .01),
+          ).toSpace(context: context, top: .01).generateButton(onTap: (){
+            context.navigatorPush(onGenerated: onGenerateRouters.onForgetPassword);
+          }),
           ButtonCustomer(
             onPressed: () {},
             buttonColor: context.toTheme.disabledColor,

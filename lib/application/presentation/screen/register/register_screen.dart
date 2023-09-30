@@ -65,7 +65,9 @@ class RegisterScreen extends StatelessWidget {
                         textAlign: TextAlign.left),
                 toSpaceVertical(context: context, size: .02),
                 ButtonCustomer(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.navigatorPush(onGenerated: onGenerateRouters.onStream);
+                  },
                   buttonColor: context.toTheme.disabledColor,
                   title: context.toAppLocalization.log_In,
                   titleColor: context.toTheme.colorScheme.onPrimary,
@@ -99,6 +101,8 @@ class RegisterScreen extends StatelessWidget {
           ),
         ),
         titleAppBar: context.toAppLocalization.register,
-        reActionBackIconAppBar: () {});
+        reActionBackIconAppBar: () {
+          context.navigatorPush(onGenerated: onGenerateRouters.onLogin);
+        });
   }
 }

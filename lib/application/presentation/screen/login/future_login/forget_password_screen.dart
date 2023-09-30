@@ -12,7 +12,7 @@ class ForgetPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return MediaScaffold.nonScaffold(
       context: context,
-      reActionBackIconAppBar: () => print("object"),
+      reActionBackIconAppBar: () => context.navigatorPush(onGenerated: onGenerateRouters.onLogin),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -44,7 +44,9 @@ class ForgetPassword extends StatelessWidget {
                 color: context.toTheme.colorScheme.onSecondaryContainer),
           ].toItem,
           ButtonCustomer(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.navigatorPush(onGenerated: onGenerateRouters.onVerifyAccount);
+                  },
                   title: context.toAppLocalization.reset_password,
                   titleColor: context.toTheme.colorScheme.onPrimary,
                   buttonColor: context.toTheme.disabledColor)
